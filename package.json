@@ -1,0 +1,22 @@
+{
+    "name": "@uifoundry/uikit",
+    "description": "ui-foundry is a official design system of",
+    "version": "1.0.0",
+    "license": "MIT",
+    "scripts": {
+        "clean": "./scripts/clean.sh",
+        "format": "prettier . --write",
+        "prepare": "lefthook install"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.8.1",
+        "@commitlint/config-conventional": "^19.8.1",
+        "@uifoundry/linters": "^0.1.5",
+        "lefthook": "^1.11.14",
+        "rimraf": "^6.0.1"
+    },
+    "engines": {
+        "node": ">=20.x",
+        "pnpm": ">=9.x"
+    }
+}
