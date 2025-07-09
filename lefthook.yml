@@ -1,11 +1,11 @@
 post-merge:
     commands:
         pnpm:
-            glob: "{package.json,pnpm-lock.yaml}"
-            run: pnpm install
+            glob: '{package.json,pnpm-lock.yaml}'
+            run: bun install
 
 commit-msg:
     commands:
         commitlint:
             run: |
-                pnpm commitlint --edit {1}
+                bun run commitlint --edit {1}
