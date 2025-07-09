@@ -3,6 +3,10 @@
     "description": "ui-foundry is a official design system of",
     "version": "1.0.0",
     "license": "MIT",
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
     "scripts": {
         "clean": "./scripts/clean.sh",
         "format": "prettier . --write",
@@ -13,10 +17,11 @@
         "@commitlint/config-conventional": "^19.8.1",
         "@uifoundry/linters": "^0.1.5",
         "lefthook": "^1.11.14",
-        "rimraf": "^6.0.1"
+        "rimraf": "^6.0.1",
+        "typescript": "^5.8.3"
     },
     "engines": {
-        "node": ">=20.x",
-        "pnpm": ">=9.x"
-    }
+        "bun": ">=1.2.18"
+    },
+    "packageManager": "bun@1.2.18"
 }
