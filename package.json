@@ -1,27 +1,28 @@
 {
-    "name": "@uifoundry/uikit",
-    "description": "ui-foundry is a official design system of",
-    "version": "1.0.0",
-    "license": "MIT",
-    "workspaces": [
-        "apps/*",
-        "packages/*"
-    ],
-    "scripts": {
-        "clean": "./scripts/clean.sh",
-        "format": "prettier . --write",
-        "prepare": "lefthook install"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^19.8.1",
-        "@commitlint/config-conventional": "^19.8.1",
-        "@uifoundry/linters": "^0.1.5",
-        "lefthook": "^1.11.14",
-        "rimraf": "^6.0.1",
-        "typescript": "5.8.3"
-    },
-    "engines": {
-        "bun": ">=1.2.18"
-    },
-    "packageManager": "bun@1.2.18"
+  "name": "@uifoundry/uikit",
+  "description": "ui-foundry is a official design system of",
+  "version": "1.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "./scripts/clean.sh",
+    "format": "biome format --write .",
+    "prepare": "lefthook install"
+  },
+  "dependencies": {
+    "@stencil/core": "^4.35.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.1.1",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@uifoundry/linters": "^0.1.5",
+    "lefthook": "^1.11.14",
+    "rimraf": "^6.0.1",
+    "typescript": "5.8.3"
+  },
+  "packageManager": "bun@1.2.18"
 }
