@@ -49,13 +49,28 @@ export default defineConfig({
               text: "Styling Tokens",
               collapsed: false,
               items: [
-                { text: "Colors", link: "/guide/styling/colors" },
-                { text: "Spacing", link: "/guide/styling/spacing" },
-                { text: "Typography", link: "/guide/styling/typography" },
+                {
+                  text: "Colors",
+                  link: "/guide/styling/colors",
+                },
+                {
+                  text: "Spacing",
+                  link: "/guide/styling/spacing",
+                },
+                {
+                  text: "Typography",
+                  link: "/guide/styling/typography",
+                },
                 { text: "Grid", link: "/guide/styling/grid" },
-                { text: "Screens", link: "/guide/styling/screens" },
+                {
+                  text: "Screens",
+                  link: "/guide/styling/screens",
+                },
                 { text: "Misc", link: "/guide/styling/misc" },
-                { text: "Elevation", link: "/guide/styling/elevation" },
+                {
+                  text: "Elevation",
+                  link: "/guide/styling/elevation",
+                },
               ],
             },
           ],

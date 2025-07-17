@@ -1,14 +1,14 @@
 {
-	"name": "docs",
-	"version": "0.0.0",
-	"scripts": {
-		"start": "vitepress dev"
-	},
-	"dependencies": {
-		"vitepress": "^1.6.3"
-	},
-	"devDependencies": {
-		"mermaid": "^11.8.1",
-		"vitepress-plugin-mermaid": "^2.0.17"
-	}
+  "name": "docs",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "vitepress dev"
+  },
+  "dependencies": {
+    "vitepress": "^1.6.3"
+  },
+  "devDependencies": {
+    "mermaid": "^11.8.1",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  }
 }
