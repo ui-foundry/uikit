@@ -1,11 +1,11 @@
 {
-	"name": "@ui-foundry/uikit",
-	"version": "1.0.0",
-	"description": "Core of web components for Ui Foundry",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ui-foundry/uikit.git",
-		"directory": "packages/core"
-	},
-	"scripts": {}
+  "name": "@ui-foundry/uikit",
+  "version": "1.0.0",
+  "description": "Core of web components for Ui Foundry",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ui-foundry/uikit.git",
+    "directory": "packages/core"
+  },
+  "scripts": {}
 }
