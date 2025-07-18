@@ -1,5 +1,5 @@
 {
-  "name": "@ui-foundry/uikit",
+  "name": "@ui-foundry/core",
   "version": "1.0.0",
   "description": "Core of web components for Ui Foundry",
   "repository": {
