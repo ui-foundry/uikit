@@ -15,8 +15,8 @@
 
 <script setup>
 defineProps({
-  headers: { type: Array, required: true },
-  rows: { type: Array, required: true },
+	headers: { type: Array, required: true },
+	rows: { type: Array, required: true },
 });
 </script>
 

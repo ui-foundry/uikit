@@ -1,26 +1,26 @@
 {
-  "name": "@ui-foundry/core",
-  "version": "1.0.0",
-  "description": "Core of web components for Ui Foundry",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ui-foundry/uikit.git",
-    "directory": "packages/core"
-  },
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
-  "es2015": "dist/esm/index.mjs",
-  "es2017": "dist/esm/index.mjs",
-  "types": "dist/types/index.d.ts",
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/core/core.esm.js",
-  "files": [
-    "dist/",
-    "loader/"
-  ],
-  "scripts": {
-    "build": "stencil build",
-    "start": "stencil build --watch"
-  }
+	"name": "@ui-foundry/core",
+	"version": "1.0.0",
+	"description": "Core of web components for Ui Foundry",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ui-foundry/uikit.git",
+		"directory": "packages/core"
+	},
+	"main": "dist/index.cjs.js",
+	"module": "dist/index.js",
+	"es2015": "dist/esm/index.mjs",
+	"es2017": "dist/esm/index.mjs",
+	"types": "dist/types/index.d.ts",
+	"collection": "dist/collection/collection-manifest.json",
+	"collection:main": "dist/collection/index.js",
+	"unpkg": "dist/core/core.esm.js",
+	"files": [
+		"dist/",
+		"loader/"
+	],
+	"scripts": {
+		"build": "stencil build",
+		"start": "stencil build --watch"
+	}
 }

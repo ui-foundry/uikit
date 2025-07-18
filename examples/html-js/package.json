@@ -1,16 +1,16 @@
 {
-  "name": "html-js",
-  "version": "1.0.0",
-  "description": "No magic, no frameworks just pure JS.",
-  "scripts": {
-    "start": "node server/index.js --watch",
-    "build": "echo build is not supported",
-    "clean": "echo clean is not supported"
-  },
-  "dependencies": {
-    "@ui-foundry/uikit": "workspace:*"
-  },
-  "devDependencies": {
-    "express": "4.18.2"
-  }
+	"name": "html-js",
+	"version": "1.0.0",
+	"description": "No magic, no frameworks just pure JS.",
+	"scripts": {
+		"start": "node server/index.js --watch",
+		"build": "echo build is not supported",
+		"clean": "echo clean is not supported"
+	},
+	"dependencies": {
+		"@ui-foundry/uikit": "workspace:*"
+	},
+	"devDependencies": {
+		"express": "4.18.2"
+	}
 }
