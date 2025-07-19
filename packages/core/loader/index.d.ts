@@ -1,27 +1,14 @@
-export * from "../dist/types/components";
+export * from '../dist/types/components';
 export interface CustomElementsDefineOptions {
-	exclude?: string[];
-	resourcesUrl?: string;
-	syncQueue?: boolean;
-	jmp?: (c: Function) => any;
-	raf?: (c: FrameRequestCallback) => number;
-	ael?: (
-		el: EventTarget,
-		eventName: string,
-		listener: EventListenerOrEventListenerObject,
-		options: boolean | AddEventListenerOptions,
-	) => void;
-	rel?: (
-		el: EventTarget,
-		eventName: string,
-		listener: EventListenerOrEventListenerObject,
-		options: boolean | AddEventListenerOptions,
-	) => void;
+  exclude?: string[];
+  resourcesUrl?: string;
+  syncQueue?: boolean;
+  jmp?: (c: Function) => any;
+  raf?: (c: FrameRequestCallback) => number;
+  ael?: (el: EventTarget, eventName: string, listener: EventListenerOrEventListenerObject, options: boolean | AddEventListenerOptions) => void;
+  rel?: (el: EventTarget, eventName: string, listener: EventListenerOrEventListenerObject, options: boolean | AddEventListenerOptions) => void;
 }
-export declare function defineCustomElements(
-	win?: Window,
-	opts?: CustomElementsDefineOptions,
-): void;
+export declare function defineCustomElements(win?: Window, opts?: CustomElementsDefineOptions): void;
 /**
  * @deprecated
  */

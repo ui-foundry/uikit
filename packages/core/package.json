@@ -1,7 +1,7 @@
 {
-	"name": "@ui-foundry/core",
+	"name": "@ui-foundry/uikit",
 	"version": "1.0.0",
-	"description": "Core of web components for Ui Foundry",
+	"description": "A design system for everyone",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ui-foundry/uikit.git",
@@ -14,7 +14,7 @@
 	"types": "dist/types/index.d.ts",
 	"collection": "dist/collection/collection-manifest.json",
 	"collection:main": "dist/collection/index.js",
-	"unpkg": "dist/core/core.esm.js",
+	"unpkg": "dist/uikit/uikit.esm.js",
 	"files": [
 		"dist/",
 		"loader/"
@@ -22,5 +22,15 @@
 	"scripts": {
 		"build": "stencil build",
 		"start": "stencil build --watch"
+	},
+	"devDependencies": {
+		"@stencil-community/postcss": "^2.2.0",
+		"@stencil/sass": "^3.2.2",
+		"@types/postcss-pxtorem": "^6.1.0",
+		"autoprefixer": "^10.4.21",
+		"postcss-pxtorem": "^6.1.0"
+	},
+	"dependencies": {
+		"open-props": "^1.7.16"
 	}
 }
