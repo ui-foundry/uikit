@@ -9,6 +9,7 @@
 		"docs"
 	],
 	"scripts": {
+		"dev:uikit": "pnpm --filter @ui-foundry/uikit start",
 		"clean": "./scripts/clean.sh",
 		"start:doc": "pnpm --filter docs start",
 		"format": "biome format --write .",
