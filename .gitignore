@@ -5,6 +5,7 @@
 # compiled output
 packages/react/src/components
 packages/core/react
+packages/core/uikit.css
 
 dist
 tmp

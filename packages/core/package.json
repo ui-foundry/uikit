@@ -1,6 +1,6 @@
 {
 	"name": "@uifoundry/uikit",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "A design system for everyone",
 	"repository": {
 		"type": "git",
@@ -15,12 +15,7 @@
 	"collection": "dist/collection/collection-manifest.json",
 	"collection:main": "dist/collection/index.js",
 	"unpkg": "dist/uikit/uikit.esm.js",
-	"files": [
-		"dist/",
-		"loader/",
-		"react/",
-		"uikit.css"
-	],
+	"files": ["dist/", "loader/", "react/", "uikit.css"],
 	"exports": {
 		".": {
 			"import": "./dist/index.js",
@@ -43,8 +38,9 @@
 		}
 	},
 	"scripts": {
-		"build": "stencil build && cpy --flat ./dist/uikit/uikit.css ./",
 		"start": "stencil build --watch",
+		"build": "stencil build && cpy --flat ./dist/uikit/uikit.css ./",
+		"prebuild": "mkdirp react && cd > uikit.css",
 		"publish": "npm publish --access public",
 		"publish-alpha": "npm publish --access public --tag alpha"
 	},
