@@ -26,6 +26,7 @@ testem.log
 /typings
 .eslintcache
 .nx
+.npmrc
 
 # System Files
 .DS_Store
