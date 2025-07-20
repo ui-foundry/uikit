@@ -3,6 +3,9 @@
 .npmrc
 
 # compiled output
+packages/react/src/components
+packages/core/react
+
 dist
 tmp
 /out-tsc

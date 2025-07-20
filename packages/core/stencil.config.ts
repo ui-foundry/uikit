@@ -1,5 +1,5 @@
 import type { Config } from "@stencil/core";
-
+import { reactOutputTarget } from "@stencil/react-output-target";
 import { sass } from "@stencil/sass";
 import { postcss } from "@stencil-community/postcss";
 import autoprefixer from "autoprefixer";
@@ -23,9 +23,14 @@ export const config: Config = {
 		}),
 	],
 	outputTargets: [
+		{ type: "dist", esmLoaderPath: "../loader" },
+		reactOutputTarget({
+			outDir: "../react/src/lib",
+		}),
 		{
-			type: "dist",
-			esmLoaderPath: "../loader",
+			type: "dist-custom-elements",
+			customElementsExportBehavior: "bundle",
+			externalRuntime: false,
 		},
 	],
 };

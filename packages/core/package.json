@@ -17,20 +17,44 @@
 	"unpkg": "dist/uikit/uikit.esm.js",
 	"files": [
 		"dist/",
-		"loader/"
+		"loader/",
+		"react/",
+		"uikit.css"
 	],
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs.js",
+			"types": "./dist/types/index.d.ts"
+		},
+		"./loader": {
+			"types": "./loader/index.d.ts",
+			"import": "./loader/index.js",
+			"require": "./loader/index.cjs.js"
+		},
+		"./react": {
+			"types": "./react/dist/types/index.d.ts",
+			"import": "./react/dist/esm/index.js",
+			"require": "./react/dist/cjs/index.js"
+		},
+		"./core.css": {
+			"import": "./uikit.css",
+			"require": "./uikit.css"
+		}
+	},
 	"scripts": {
-		"build": "stencil build",
-		"start": "stencil build --watch"
+		"build": "stencil build && cpy --flat ./dist/uikit/uikit.css ./",
+		"start": "stencil build --watch",
+		"publish": "npm publish --access public",
+		"publish-alpha": "npm publish --access public --tag alpha"
 	},
 	"devDependencies": {
 		"@stencil-community/postcss": "^2.2.0",
+		"@stencil/react-output-target": "^1.2.0",
 		"@stencil/sass": "^3.2.2",
 		"@types/postcss-pxtorem": "^6.1.0",
+		"cpy-cli": "^5.0.0",
 		"autoprefixer": "^10.4.21",
 		"postcss-pxtorem": "^6.1.0"
-	},
-	"dependencies": {
-		"open-props": "^1.7.16"
 	}
 }
