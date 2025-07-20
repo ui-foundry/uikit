@@ -49,7 +49,7 @@
 		"start": "stencil build --watch",
 		"build": "stencil build && cpy --flat ./dist/uikit/uikit.css ./",
 		"prebuild": "mkdirp react && cd > uikit.css",
-		"publish": "pnpm publish --access public --no-git-checks"
+		"publish:core": "pnpm publish --access public --no-git-checks"
 	},
 	"devDependencies": {
 		"@stencil-community/postcss": "^2.2.0",
