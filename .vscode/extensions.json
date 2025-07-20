@@ -1,3 +1,23 @@
 {
-	"recommendations": ["bradlc.vscode-tailwindcss", "yoavbls.pretty-ts-errors"]
+	"recommendations": [
+		"yoavbls.pretty-ts-errors",
+		"aaron-bond.better-comments",
+		"bradlc.vscode-tailwindcss",
+		"dbaeumer.vscode-eslint",
+		"donjayamanne.githistory",
+		"eamodio.gitlens",
+		"ecmel.vscode-html-css",
+		"esbenp.prettier-vscode",
+		"fdom.stencil-snippets",
+		"mrmlnc.vscode-scss",
+		"ms-vsliveshare.vsliveshare",
+		"nrwl.angular-console",
+		"oouo-diogo-perdigao.docthis",
+		"runem.lit-plugin",
+		"sonarsource.sonarlint-vscode",
+		"stackbreak.comment-divider",
+		"stylelint.vscode-stylelint",
+		"zignd.html-css-class-completion",
+		"vunguyentuan.vscode-css-variables"
+	]
 }

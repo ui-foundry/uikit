@@ -1,7 +1,0 @@
-@use './scss/utilities/index' as *;
-@use './scss/mixins' as *;
-
-@use "./scss/reset";
-@use "./scss/base";
-
-@include generate-utilities($utilities);

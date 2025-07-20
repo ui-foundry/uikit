@@ -3,9 +3,7 @@
 .npmrc
 
 # compiled output
-packages/react/src/components
-packages/core/react
-packages/core/uikit.css
+packages/react/src/components.ts
 
 dist
 tmp

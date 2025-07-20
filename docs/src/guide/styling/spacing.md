@@ -25,9 +25,10 @@ All spacings are defined as `--spacing-*` CSS variables.
 />
 
 ## Example Usage
+
 ```css
 .my-element {
-  margin-bottom: var(--spacing-medium);
-  padding: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+    padding: var(--spacing-small);
 }
 ```

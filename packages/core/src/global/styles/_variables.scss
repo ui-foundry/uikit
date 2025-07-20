@@ -12,20 +12,19 @@ $screen-2k: 2048px; // 2K resolution
 $screen-4k: 3840px; // 4K resolution
 
 $breakpoints: (
-  mobile: 0,
-  // xs: $screen-xs,
-  // sm: $screen-sm,
-  // md: $screen-md,
-  // lg: $screen-lg,
-  // xlg: $screen-xlg,
-  // fhd: $screen-fhd,
-  // '2k': $screen-2k,
-  // '4k': $screen-4k
+    mobile: 0,
+    // xs: $screen-xs,
+    // sm: $screen-sm,
+    // md: $screen-md,
+    // lg: $screen-lg,
+    // xlg: $screen-xlg,
+    // fhd: $screen-fhd,
+    // '2k': $screen-2k,
+     // '4k': $screen-4k
 ) !default;
 
 // Grid columns
 $grid-columns: 12 !default;
-
 
 // ----------------------------------
 // Colors

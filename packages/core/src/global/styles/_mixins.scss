@@ -1,0 +1,69 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use './variables' as *;
+
+// -------------------------------------
+// Mixin: min-query
+// -------------------------------------
+@mixin min-query($device) {
+    @if map.has-key($breakpoints, $device) {
+        @media (min-width: map.get($breakpoints, $device)) {
+            @content;
+        }
+    } @else {
+        @media (min-width: $device) {
+            @content;
+        }
+    }
+}
+
+// -------------------------------------
+// Mixin: generate-responsive-utility
+// -------------------------------------
+@mixin generate-responsive-utility($class, $map, $property) {
+    @each $device, $width in $breakpoints {
+        @if $width == 0 {
+            // Base (no media query)
+            @each $key, $value in $map {
+                .uk-#{$class}-#{$key} {
+                    #{$property}: #{$value};
+                }
+            }
+        } @else {
+            @include min-query($device) {
+                @each $key, $value in $map {
+                    .uk-#{$class}-#{$device}-#{$key} {
+                        #{$property}: #{$value};
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Reusable mixin for responsive utility generation
+@mixin generate-utilities($utilities) {
+    @each $key, $utility in $utilities {
+        $property: map.get($utility, 'property');
+        $class: map.get($utility, 'class');
+        $values: map.get($utility, 'values');
+
+        // Convert list to map if necessary
+        $value-map: ();
+        @if meta.type-of($values) == 'list' {
+            @each $val in $values {
+                $value-map: map.merge(
+                    $value-map,
+                    (
+                        $val: $val,
+                    )
+                );
+            }
+        } @else {
+            $value-map: $values;
+        }
+
+        // Generate responsive utility classes
+        @include generate-responsive-utility($class, $value-map, $property);
+    }
+}

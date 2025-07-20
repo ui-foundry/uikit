@@ -1,0 +1,23 @@
+$utilities-flex: (
+    'flex': (
+        class: flex,
+        property: flex,
+        values: (
+            auto: 1 1 auto,
+            initial: 0 1 auto,
+            none: none,
+            1: 1,
+        ),
+    ),
+);
+
+$utilities-flex-direction: (
+    'flex-direction': (
+        property: flex-direction,
+        class: flex,
+        values: (
+            row: row,
+            col: column,
+        ),
+    ),
+);

@@ -1,8 +1,8 @@
 packages:
-  - packages/*
-  - examples/*
-  - docs
+    - packages/*
+    - examples/*
+    - docs
 
 onlyBuiltDependencies:
-  - esbuild
-  - lefthook
+    - esbuild
+    - lefthook
