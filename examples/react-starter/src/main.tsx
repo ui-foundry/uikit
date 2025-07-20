@@ -1,8 +1,8 @@
-import { UkAlert } from "@ui-foundry/uikit-react";
+import { UkAlert } from "@uifoundry/uikit/react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import "@ui-foundry/uikit-react/styles.css";
+import "@uifoundry/uikit-react/styles.css";
 
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>

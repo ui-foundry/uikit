@@ -1,7 +1,7 @@
 ## Installation
 
 ```bash
-npm install @ui-foundry/uikit-react
+npm install @uifoundry/uikit
 ```
 
 ## Documentation

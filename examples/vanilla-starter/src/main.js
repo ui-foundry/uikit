@@ -1,5 +1,5 @@
-import "@ui-foundry/uikit/dist/uikit/uikit.css";
-import "@ui-foundry/uikit/dist/uikit/uikit.esm.js";
+import "@uifoundry/uikit/dist/uikit/uikit.css";
+import "@uifoundry/uikit/dist/uikit/uikit.esm.js";
 
 export function setupCounter(btnEl, countEl) {
 	let counter = 0;

@@ -9,7 +9,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@ui-foundry/uikit": "workspace:*"
+		"@uifoundry/uikit": "workspace:*"
 	},
 	"devDependencies": {
 		"vite": "^7.0.4"

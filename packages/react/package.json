@@ -1,6 +1,6 @@
 {
-	"name": "@ui-foundry/uikit-react",
-	"description": "React wrapper components for @ui-foundry/uikit-react",
+	"name": "@uifoundry/uikit-react",
+	"description": "React wrapper components for @uifoundry/uikit-react",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"types": "dist/types/index.d.ts",
@@ -32,6 +32,6 @@
 		"@stencil/react-output-target": "^1.2.0"
 	},
 	"peerDependencies": {
-		"@ui-foundry/uikit": "workspace:*"
+		"@uifoundry/uikit": "workspace:*"
 	}
 }

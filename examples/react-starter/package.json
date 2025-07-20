@@ -12,7 +12,7 @@
 	"dependencies": {
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
-		"@ui-foundry/uikit-react": "workspace:*"
+		"@uifoundry/uikit": "workspace:*"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.30.1",

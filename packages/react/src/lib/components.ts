@@ -9,7 +9,7 @@
 
 import type { EventName, StencilReactComponent } from '@stencil/react-output-target/runtime';
 import { createComponent } from '@stencil/react-output-target/runtime';
-import { UkAlert as UkAlertElement, defineCustomElement as defineUkAlert } from "@ui-foundry/uikit/dist/components/uk-alert.js";
+import { UkAlert as UkAlertElement, defineCustomElement as defineUkAlert } from "@uifoundry/uikit/dist/components/uk-alert.js";
 import React from 'react';
 
 export type UkAlertEvents = { onClosed: EventName<CustomEvent<void>> };

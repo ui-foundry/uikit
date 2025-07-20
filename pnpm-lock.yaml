@@ -49,9 +49,9 @@ importers:
 
   examples/react-starter:
     dependencies:
-      '@ui-foundry/uikit-react':
+      '@uifoundry/uikit':
         specifier: workspace:*
-        version: link:../../packages/react
+        version: link:../../packages/core
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -95,7 +95,7 @@ importers:
 
   examples/vanilla-starter:
     dependencies:
-      '@ui-foundry/uikit':
+      '@uifoundry/uikit':
         specifier: workspace:*
         version: link:../../packages/core
     devDependencies:
@@ -132,7 +132,7 @@ importers:
       '@stencil/react-output-target':
         specifier: ^1.2.0
         version: 1.2.0(@stencil/core@4.35.3)(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@ui-foundry/uikit':
+      '@uifoundry/uikit':
         specifier: workspace:*
         version: link:../core
     devDependencies:
