@@ -10,6 +10,11 @@
 	],
 	"scripts": {
 		"dev:uikit": "pnpm --filter @uifoundry/uikit start",
+		"build:uikit": "pnpm --filter @uifoundry/uikit build",
+		"build:react": "pnpm --filter @uifoundry/uikit-react build",
+		"build": "pnpm run build:uikit && pnpm run build:react",
+
+		"publish": "pnpm run build && pnpm --filter @uifoundry/uikit run publish",
 		"clean": "./scripts/clean.sh",
 		"start:doc": "pnpm --filter docs start",
 		"format": "biome format --write .",
