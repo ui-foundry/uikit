@@ -3,8 +3,7 @@
 .npmrc
 
 # compiled output
-packages/react/src/components
-packages/core/react
+packages/react/src/components.ts
 
 dist
 tmp
@@ -25,6 +24,7 @@ testem.log
 /typings
 .eslintcache
 .nx
+.npmrc
 
 # System Files
 .DS_Store

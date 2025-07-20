@@ -9,9 +9,9 @@ export namespace Components {
     interface UkAlert {
         "heading"?: string;
         /**
-          * @default "success"
+          * @default 'success'
          */
-        "type"?: "info" | "success" | "warning" | "danger";
+        "type"?: 'info' | 'success' | 'warning' | 'danger';
     }
 }
 export interface UkAlertCustomEvent<T> extends CustomEvent<T> {
@@ -45,9 +45,9 @@ declare namespace LocalJSX {
         "heading"?: string;
         "onClosed"?: (event: UkAlertCustomEvent<void>) => void;
         /**
-          * @default "success"
+          * @default 'success'
          */
-        "type"?: "info" | "success" | "warning" | "danger";
+        "type"?: 'info' | 'success' | 'warning' | 'danger';
     }
     interface IntrinsicElements {
         "uk-alert": UkAlert;
