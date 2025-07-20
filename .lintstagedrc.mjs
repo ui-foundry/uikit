@@ -7,8 +7,8 @@ export default {
         return [`pnpm exec prettier --write ${fileList}`];
     },
 
-    // Lint only files in packages/uikit/src/
-    'packages/uikit/src/**/*.{js,ts,tsx}': (files) => {
+    // Lint only files in packages/core/src/
+    'packages/core/src/**/*.{js,ts,tsx}': (files) => {
         const fileList = files.map((file) => relative(process.cwd(), file)).join(' ');
         return [`pnpm exec eslint --fix ${fileList}`];
     },

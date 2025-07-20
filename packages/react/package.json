@@ -1,6 +1,8 @@
 {
     "name": "@uifoundry/uikit-react",
-    "description": "React wrapper components for @uifoundry/uikit-react",
+    "version": "1.0.0-beta.3",
+    "license": "Apache-2.0",
+    "description": "React specific wrapper for @uifoundry/uikit components",
     "type": "module",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -13,7 +15,7 @@
         "watch": "pnpm run tsc -- --watch"
     },
     "dependencies": {
-        "@uifoundry/uikit": "workspace:*"
+        "@uifoundry/uikit": "^1.0.0-beta.3"
     },
     "peerDependencies": {
         "react": "^18 || ^19",

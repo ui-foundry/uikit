@@ -1,15 +1,11 @@
 {
-    "name": "@uifoundry/uikit",
-    "description": "uifoundry is a official design system of",
-    "version": "1.0.0-beta.2",
-    "license": "MIT",
-    "workspaces": [
-        "examples/*",
-        "packages/*",
-        "docs"
-    ],
-    "publishConfig": {
-        "access": "public"
+    "name": "uikit",
+    "description": "uifoundry Design System",
+    "license": "Apache-2.0",
+    "private": true,
+    "repository": {
+        "type": "Git",
+        "url": "https://github.com/ui-foundry/uikit"
     },
     "scripts": {
         "prepare": "husky",
@@ -19,6 +15,8 @@
         "lint:branch-name": "chmod 755 .husky/branch-name.sh && sh .husky/branch-name.sh",
         "lint:staged": "lint-staged --verbose",
         "start:uikit": "pnpm --filter @uifoundry/uikit run start",
+        "build:uikit": "pnpm --filter @uifoundry/uikit run build",
+        "build:wrappers": "pnpm -r --filter './packages/react' run build",
         "clean": "run-s clean:*",
         "clean:build": "pnpm dlx rimraf .stencil dist",
         "clean:modules": "pnpm dlx rimraf ./node_modules ./**/node_modules ./packages/**/node_modules ./examples/**/node_modules"
