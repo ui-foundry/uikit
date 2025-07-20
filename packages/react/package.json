@@ -1,6 +1,6 @@
 {
     "name": "@uifoundry/uikit-react",
-    "version": "1.0.0-beta.3",
+    "version": "1.0.0-beta.4",
     "license": "Apache-2.0",
     "description": "React specific wrapper for @uifoundry/uikit components",
     "type": "module",
@@ -15,7 +15,7 @@
         "watch": "pnpm run tsc -- --watch"
     },
     "dependencies": {
-        "@uifoundry/uikit": "^1.0.0-beta.3"
+        "@uifoundry/uikit": "^1.0.0-beta.4"
     },
     "peerDependencies": {
         "react": "^18 || ^19",
