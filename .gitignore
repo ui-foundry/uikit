@@ -1,5 +1,35 @@
-.DS_Store
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+.npmrc
+
+# compiled output
+packages/react/src/components
+packages/core/react
+
+dist
+tmp
+/out-tsc
+.stencil
+
+# dependencies
 node_modules
-dist/
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+.eslintcache
+.nx
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Documentation
 docs/.vitepress/cache
 docs/.vitepress/dist

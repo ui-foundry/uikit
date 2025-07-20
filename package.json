@@ -1,6 +1,6 @@
 {
 	"name": "@uifoundry/uikit",
-	"description": "ui-foundry is a official design system of",
+	"description": "uifoundry is a official design system of",
 	"version": "1.0.0",
 	"license": "MIT",
 	"workspaces": [
@@ -9,6 +9,7 @@
 		"docs"
 	],
 	"scripts": {
+		"dev:uikit": "pnpm --filter @uifoundry/uikit start",
 		"clean": "./scripts/clean.sh",
 		"start:doc": "pnpm --filter docs start",
 		"format": "biome format --write .",
@@ -25,5 +26,8 @@
 		"lefthook": "^1.11.14",
 		"rimraf": "^6.0.1",
 		"typescript": "5.8.3"
+	},
+	"engines": {
+		"node": ">=20"
 	}
 }

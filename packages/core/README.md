@@ -7,5 +7,5 @@ This is the Web Components implementation of the Atomium design system to be use
 ### Installation
 
 ```bash
-npm i @ui-foundry/uikit
+npm i @uifoundry/uikit
 ```
