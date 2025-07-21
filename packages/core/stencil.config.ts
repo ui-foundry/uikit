@@ -1,14 +1,11 @@
-import { resolve } from 'node:path';
+import { postcss } from '@stencil-community/postcss';
 import type { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
 import { sass } from '@stencil/sass';
-import { postcss } from '@stencil-community/postcss';
 import autoprefixer from 'autoprefixer';
+import { resolve } from 'node:path';
 import pxtorem from 'postcss-pxtorem';
 
-const namespace = 'uifoundry';
-const _componentCorePackage = `@${namespace}/uikit`;
-const customElementsDir = 'dist/components';
 const resolvePath = (path: string) => resolve(__dirname, path).replace(/\\/g, '/');
 
 export const config: Config = {
@@ -37,7 +34,6 @@ export const config: Config = {
         { type: 'dist', esmLoaderPath: '../loader' },
         reactOutputTarget({
             outDir: resolvePath('../react/src/'),
-            customElementsDir,
         }),
         {
             type: 'dist-custom-elements',
@@ -57,7 +53,5 @@ export const config: Config = {
 
     devServer: {
         openBrowser: false,
-        port: 8001,
-        reloadStrategy: 'pageReload',
     },
 };
