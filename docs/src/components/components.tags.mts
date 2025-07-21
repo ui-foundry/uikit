@@ -56,4 +56,4 @@ export const components = [
     'tile',
     'timepicker',
     'tooltip',
-];
+]

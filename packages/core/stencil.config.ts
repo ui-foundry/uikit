@@ -1,12 +1,12 @@
-import { postcss } from '@stencil-community/postcss';
-import type { Config } from '@stencil/core';
-import { reactOutputTarget } from '@stencil/react-output-target';
-import { sass } from '@stencil/sass';
-import autoprefixer from 'autoprefixer';
-import { resolve } from 'node:path';
-import pxtorem from 'postcss-pxtorem';
+import { postcss } from '@stencil-community/postcss'
+import type { Config } from '@stencil/core'
+import { reactOutputTarget } from '@stencil/react-output-target'
+import { sass } from '@stencil/sass'
+import autoprefixer from 'autoprefixer'
+import { resolve } from 'node:path'
+import pxtorem from 'postcss-pxtorem'
 
-const resolvePath = (path: string) => resolve(__dirname, path).replace(/\\/g, '/');
+const resolvePath = (path: string) => resolve(__dirname, path).replace(/\\/g, '/')
 
 export const config: Config = {
     namespace: 'uikit',
@@ -47,4 +47,4 @@ export const config: Config = {
     devServer: {
         openBrowser: false,
     },
-};
+}
