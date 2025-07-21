@@ -1,6 +1,6 @@
 {
     "name": "@uifoundry/uikit",
-    "version": "1.0.0-beta.4",
+    "version": "1.0.0-beta.5",
     "license": "Apache-2.0",
     "description": "A design system for everyone ruled by uifoundry developers :)",
     "main": "./dist/index.cjs.js",
