@@ -2,7 +2,3 @@ packages:
     - packages/*
     - examples/*
     - docs
-
-onlyBuiltDependencies:
-    - esbuild
-    - lefthook

@@ -24,9 +24,18 @@ importers:
       '@stencil/core':
         specifier: ^4.36.1
         version: 4.36.1
+      '@stencil/react-output-target':
+        specifier: ^1.2.0
+        version: 1.2.0(@stencil/core@4.36.1)(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@types/node':
         specifier: ^24.0.15
         version: 24.0.15
+      '@types/react':
+        specifier: ^19.1.8
+        version: 19.1.8
+      '@types/react-dom':
+        specifier: ^19.1.6
+        version: 19.1.6(@types/react@19.1.8)
       eslint:
         specifier: ^9.31.0
         version: 9.31.0(jiti@2.4.2)
@@ -65,14 +74,14 @@ importers:
     dependencies:
       vitepress:
         specifier: ^1.6.3
-        version: 1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3)
+        version: 1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(@types/react@19.1.8)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3)
     devDependencies:
       mermaid:
         specifier: ^11.8.1
         version: 11.8.1
       vitepress-plugin-mermaid:
         specifier: ^2.0.17
-        version: 2.0.17(mermaid@11.8.1)(vitepress@1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3))
+        version: 2.0.17(mermaid@11.8.1)(vitepress@1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(@types/react@19.1.8)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3))
 
   examples/react-starter:
     dependencies:
@@ -82,12 +91,6 @@ importers:
       '@uifoundry/uikit-react':
         specifier: workspace:*
         version: link:../../packages/react
-      react:
-        specifier: ^19.1.0
-        version: 19.1.0
-      react-dom:
-        specifier: ^19.1.0
-        version: 19.1.0(react@19.1.0)
     devDependencies:
       '@rsbuild/core':
         specifier: ^1.4.3
@@ -95,12 +98,6 @@ importers:
       '@rsbuild/plugin-react':
         specifier: ^1.3.3
         version: 1.3.4(@rsbuild/core@1.4.8)
-      '@types/react':
-        specifier: ^19.1.8
-        version: 19.1.8
-      '@types/react-dom':
-        specifier: ^19.1.6
-        version: 19.1.6(@types/react@19.1.8)
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -120,9 +117,6 @@ importers:
       '@stencil-community/postcss':
         specifier: ^2.2.0
         version: 2.2.0(@stencil/core@4.36.1)
-      '@stencil/react-output-target':
-        specifier: ^1.2.0
-        version: 1.2.0(@stencil/core@4.36.1)(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@stencil/sass':
         specifier: ^3.2.2
         version: 3.2.2(@stencil/core@4.36.1)
@@ -153,6 +147,9 @@ importers:
       react-dom:
         specifier: ^18 || ^19
         version: 19.1.0(react@19.1.0)
+      typescript:
+        specifier: ^5
+        version: 5.8.3
 
 packages:
 
@@ -3943,9 +3940,9 @@ snapshots:
 
   '@docsearch/css@3.8.2': {}
 
-  '@docsearch/js@3.8.2(@algolia/client-search@5.32.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(search-insights@2.17.3)':
+  '@docsearch/js@3.8.2(@algolia/client-search@5.32.0)(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(search-insights@2.17.3)':
     dependencies:
-      '@docsearch/react': 3.8.2(@algolia/client-search@5.32.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(search-insights@2.17.3)
+      '@docsearch/react': 3.8.2(@algolia/client-search@5.32.0)(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(search-insights@2.17.3)
       preact: 10.26.9
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -3954,13 +3951,14 @@ snapshots:
       - react-dom
       - search-insights
 
-  '@docsearch/react@3.8.2(@algolia/client-search@5.32.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(search-insights@2.17.3)':
+  '@docsearch/react@3.8.2(@algolia/client-search@5.32.0)(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(search-insights@2.17.3)':
     dependencies:
       '@algolia/autocomplete-core': 1.17.7(@algolia/client-search@5.32.0)(algoliasearch@5.32.0)(search-insights@2.17.3)
       '@algolia/autocomplete-preset-algolia': 1.17.7(@algolia/client-search@5.32.0)(algoliasearch@5.32.0)
       '@docsearch/css': 3.8.2
       algoliasearch: 5.32.0
     optionalDependencies:
+      '@types/react': 19.1.8
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
       search-insights: 2.17.3
@@ -7180,17 +7178,17 @@ snapshots:
       sass-embedded: 1.89.2
       yaml: 2.8.0
 
-  vitepress-plugin-mermaid@2.0.17(mermaid@11.8.1)(vitepress@1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3)):
+  vitepress-plugin-mermaid@2.0.17(mermaid@11.8.1)(vitepress@1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(@types/react@19.1.8)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3)):
     dependencies:
       mermaid: 11.8.1
-      vitepress: 1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3)
+      vitepress: 1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(@types/react@19.1.8)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3)
     optionalDependencies:
       '@mermaid-js/mermaid-mindmap': 9.3.0
 
-  vitepress@1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3):
+  vitepress@1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(@types/react@19.1.8)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3):
     dependencies:
       '@docsearch/css': 3.8.2
-      '@docsearch/js': 3.8.2(@algolia/client-search@5.32.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(search-insights@2.17.3)
+      '@docsearch/js': 3.8.2(@algolia/client-search@5.32.0)(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(search-insights@2.17.3)
       '@iconify-json/simple-icons': 1.2.42
       '@shikijs/core': 2.5.0
       '@shikijs/transformers': 2.5.0

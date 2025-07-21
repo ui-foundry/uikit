@@ -32,25 +32,18 @@ export const config: Config = {
     ],
     outputTargets: [
         { type: 'dist', esmLoaderPath: '../loader' },
-        reactOutputTarget({
-            outDir: resolvePath('../react/src/'),
-        }),
         {
             type: 'dist-custom-elements',
             customElementsExportBehavior: 'bundle',
             externalRuntime: false,
         },
+        reactOutputTarget({
+            outDir: resolvePath('../react/src/'),
+        }),
     ],
     extras: {
-        /**
-         * Details:
-         * https://stenciljs.com/docs/config-extras
-         */
         enableImportInjection: true,
-        experimentalScopedSlotChanges: true,
-        experimentalSlotFixes: true,
     },
-
     devServer: {
         openBrowser: false,
     },

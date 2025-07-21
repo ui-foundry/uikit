@@ -21,7 +21,6 @@
     },
     "devDependencies": {
         "@stencil-community/postcss": "^2.2.0",
-        "@stencil/react-output-target": "^1.2.0",
         "@stencil/sass": "^3.2.2",
         "@types/postcss-pxtorem": "^6.1.0",
         "@types/react": "^19.1.8",

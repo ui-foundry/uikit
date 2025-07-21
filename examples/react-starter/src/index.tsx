@@ -12,7 +12,7 @@ if (rootEl) {
             <div className="uk-d-flex uk-flex-col">
                 <h1>Rsbuild with React</h1>
                 <p>Start building amazing things with Rsbuild.</p>
-                <UkAlert heading="Welcome to Rsbuild!" type="info">
+                <UkAlert type='info'>
                     <p>
                         This is a simple alert component from the UI Foundry Kit. You can use it to display important
                         messages to users.
