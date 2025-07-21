@@ -1,24 +1,29 @@
 {
     "name": "@uifoundry/uikit-react",
-    "version": "1.0.0-beta.4",
+    "version": "1.0.0-beta.5",
     "license": "Apache-2.0",
     "description": "React specific wrapper for @uifoundry/uikit components",
-    "type": "module",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "types": "dist/types/index.d.ts",
     "files": [
-        "dist"
+        "dist/"
     ],
+    "sideEffects": false,
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
-        "build": "pnpm tsc -p . --outDir ./dist",
-        "watch": "pnpm run tsc -- --watch"
+        "build": "npm run tsc",
+        "tsc": "tsc -p . --outDir ./dist",
+        "watch": "pnpm tsc --watch"
     },
     "dependencies": {
-        "@uifoundry/uikit": "^1.0.0-beta.4"
+        "@uifoundry/uikit": "1.0.0-beta.5"
     },
     "peerDependencies": {
         "react": "^18 || ^19",
-        "react-dom": "^18 || ^19"
+        "react-dom": "^18 || ^19",
+        "typescript": "^5"
     }
 }

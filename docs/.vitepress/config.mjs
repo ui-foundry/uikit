@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitepress';
-import { components } from '../src/components/components.tags.mts';
+import { defineConfig } from 'vitepress'
+import { components } from '../src/components/components.tags.mts'
 
 const componentNavItems = components.map((component) => {
     return {
@@ -9,8 +9,8 @@ const componentNavItems = components.map((component) => {
             .map((c) => c[0].toUpperCase() + c.slice(1))
             .join(' '),
         link: `/components/${component}`,
-    };
-});
+    }
+})
 
 export default defineConfig({
     title: 'UIKit',
@@ -79,4 +79,4 @@ export default defineConfig({
             '/components/': [{ items: componentNavItems }],
         },
     },
-});
+})

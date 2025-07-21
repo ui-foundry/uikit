@@ -1,6 +1,6 @@
 {
     "name": "@uifoundry/uikit",
-    "version": "1.0.0-beta.4",
+    "version": "1.0.0-beta.5",
     "license": "Apache-2.0",
     "description": "A design system for everyone ruled by uifoundry developers :)",
     "main": "./dist/index.cjs.js",
@@ -8,7 +8,7 @@
     "types": "./dist/types/index.d.ts",
     "collection": "./dist/collection/collection-manifest.json",
     "collection:main": "./dist/collection/index.js",
-    "unpkg": "./dist/beeq/beeq.esm.js",
+    "unpkg": "./dist/uikit/uikit.esm.js",
     "files": [
         "dist/"
     ],
@@ -16,12 +16,11 @@
         "access": "public"
     },
     "scripts": {
-        "start": "stencil build --dev --watch --serve",
+        "start": "stencil build --dev --watch",
         "build": "stencil build"
     },
     "devDependencies": {
         "@stencil-community/postcss": "^2.2.0",
-        "@stencil/react-output-target": "^1.2.0",
         "@stencil/sass": "^3.2.2",
         "@types/postcss-pxtorem": "^6.1.0",
         "@types/react": "^19.1.8",

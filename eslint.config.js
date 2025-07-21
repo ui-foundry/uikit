@@ -1,7 +1,7 @@
-const globals = require('globals');
-const js = require('@eslint/js');
-const prettierPlugin = require('eslint-plugin-prettier');
-const jsoncParser = require('jsonc-eslint-parser');
+const globals = require('globals')
+const js = require('@eslint/js')
+const prettierPlugin = require('eslint-plugin-prettier')
+const jsoncParser = require('jsonc-eslint-parser')
 
 /** @type { import("eslint").Linter.Config[] } */
 module.exports = [
@@ -40,4 +40,4 @@ module.exports = [
             'pnpm-lock.yaml',
         ],
     },
-];
+]
