@@ -1,0 +1,37 @@
+/* -------------------------------------------------------------------------- */
+/*                          Avatar custom properties                          */
+/* -------------------------------------------------------------------------- */
+
+:host {
+    --uk-avatar--border-color: #1c1d23;
+    --uk-avatar--border-style: solid;
+    --uk-avatar--border-width: 1px;
+
+    --uk-avatar--size-xsmall: 24px;
+    --uk-avatar--size-small: 32px;
+    --uk-avatar--size-medium: 48px;
+    --uk-avatar--size-large: 64px;
+
+    --uk-avatar--badge-top-square: -5px;
+    --uk-avatar--badge-left-square: 80%;
+    --uk-avatar--badge-top-circle: 0;
+    --uk-avatar--badge-left-circle: 75%;
+
+    --uk-font-size--xs: 0.75rem;
+    --uk-font-size--sm: 0.875rem;
+    --uk-font-size--md: 1rem;
+    --uk-font-size--lg: 1.125rem;
+    --uk-font-size--xl: 1.5rem;
+    --uk-font-size--xxl: 2rem;
+    --uk-font-size--xxl2: 2.5rem;
+    --uk-font-size--xxl3: 3rem;
+    --uk-font-size--xxl4: 3.5rem;
+    --uk-font-size--xxl5: 4rem;
+
+    --uk-border-radius-small: 0rem;
+    --uk-border-radius-medium: 0.5rem;
+    --uk-border-radius-large: 0.75rem;
+    --uk-border-radius-x-large: 1rem;
+    --uk-border-radius-circle: 50%;
+    --uk-border-radius-pill: 9999px;
+}

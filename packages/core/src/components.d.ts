@@ -5,41 +5,105 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { TAvatarShape, TAvatarSize } from "./components/avatar/avatar.types";
+export { TAvatarShape, TAvatarSize } from "./components/avatar/avatar.types";
 export namespace Components {
+    interface BqAvatar {
+        "initials": string;
+        /**
+          * @default 'circle'
+         */
+        "shape": TAvatarShape;
+        /**
+          * @default 'medium'
+         */
+        "size": TAvatarSize;
+    }
     interface UkAlert {
         /**
           * @default 'success'
          */
         "type"?: 'info' | 'success' | 'warning' | 'danger';
     }
+    interface UkAvatar {
+        "initials": string;
+        /**
+          * @default 'circle'
+         */
+        "shape": TAvatarShape;
+        /**
+          * @default 'medium'
+         */
+        "size": TAvatarSize;
+    }
 }
 declare global {
+    interface HTMLBqAvatarElement extends Components.BqAvatar, HTMLStencilElement {
+    }
+    var HTMLBqAvatarElement: {
+        prototype: HTMLBqAvatarElement;
+        new (): HTMLBqAvatarElement;
+    };
     interface HTMLUkAlertElement extends Components.UkAlert, HTMLStencilElement {
     }
     var HTMLUkAlertElement: {
         prototype: HTMLUkAlertElement;
         new (): HTMLUkAlertElement;
     };
+    interface HTMLUkAvatarElement extends Components.UkAvatar, HTMLStencilElement {
+    }
+    var HTMLUkAvatarElement: {
+        prototype: HTMLUkAvatarElement;
+        new (): HTMLUkAvatarElement;
+    };
     interface HTMLElementTagNameMap {
+        "bq-avatar": HTMLBqAvatarElement;
         "uk-alert": HTMLUkAlertElement;
+        "uk-avatar": HTMLUkAvatarElement;
     }
 }
 declare namespace LocalJSX {
+    interface BqAvatar {
+        "initials"?: string;
+        /**
+          * @default 'circle'
+         */
+        "shape"?: TAvatarShape;
+        /**
+          * @default 'medium'
+         */
+        "size"?: TAvatarSize;
+    }
     interface UkAlert {
         /**
           * @default 'success'
          */
         "type"?: 'info' | 'success' | 'warning' | 'danger';
     }
+    interface UkAvatar {
+        "initials"?: string;
+        /**
+          * @default 'circle'
+         */
+        "shape"?: TAvatarShape;
+        /**
+          * @default 'medium'
+         */
+        "size"?: TAvatarSize;
+    }
     interface IntrinsicElements {
+        "bq-avatar": BqAvatar;
         "uk-alert": UkAlert;
+        "uk-avatar": UkAvatar;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "bq-avatar": LocalJSX.BqAvatar & JSXBase.HTMLAttributes<HTMLBqAvatarElement>;
             "uk-alert": LocalJSX.UkAlert & JSXBase.HTMLAttributes<HTMLUkAlertElement>;
+            "uk-avatar": LocalJSX.UkAvatar & JSXBase.HTMLAttributes<HTMLUkAvatarElement>;
         }
     }
 }

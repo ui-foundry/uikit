@@ -1,0 +1,46 @@
+@use './avatar.variables';
+
+:host {
+    position: relative;
+    display: inline-block;
+}
+
+.uk-avatar {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--uk-avatar--border-radius);
+    background: var(--uk-avatar--background);
+    width: 32px;
+    height: 32px;
+    border-style: var(--uk-avatar--border-style);
+
+    &__initial {
+        position: absolute;
+        inset-inline-start: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        block-size: 100%;
+        inline-size: 100%;
+        inset-block-start: 0px;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &__size {
+        @each $size, $font in (xsmall: xs, small: sm, medium: md, large: lg) {
+            &--#{$size} {
+                block-size: var(--uk-avatar--size-#{$size});
+                inline-size: var(--uk-avatar--size-#{$size});
+                font-size: var(--uk-font-size--#{$font});
+            }
+        }
+    }
+
+    @each $shape, $radius in (circle: circle, square: large) {
+        &--#{$shape} {
+            border-radius: var(--uk-border-radius-#{$radius});
+        }
+    }
+}
