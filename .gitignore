@@ -1,0 +1,35 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+.npmrc
+
+# compiled output
+packages/react/src/components.ts
+
+dist
+tmp
+/out-tsc
+.stencil
+
+# dependencies
+node_modules
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+.eslintcache
+.nx
+.npmrc
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Documentation
+docs/.vitepress/cache
+docs/.vitepress/dist
