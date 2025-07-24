@@ -1,15 +1,32 @@
 ---
+# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-    name: VitePress
-    text: Vite & Vue powered static site generator.
-    tagline: Simple, powerful, and performant. Meet the modern SSG framework you've always wanted.
+    name: UiKit
+    text: Design. Shared. Simplified
+    tagline: Ready to use Components in alignment with the Ui Foundry Styleguide
     actions:
         - theme: brand
-          text: Get Started
-          link: /example
+          text: Getting Started
+          link: /guide
         - theme: alt
-          text: View on GitHub
-          link: https://github.com/vuejs/vitepress
+          text: React Example
+          link: /demo/react
+        - theme: alt
+          text: Angular Example
+          link: /demo/angular
+        - theme: alt
+          text: Vue Example
+          link: /demo/vue
+
+features:
+    - title: Agnostic
+      details: Our Library has first class support for Angular, React and Vue right out of the box. Checkout
+          the example apps above!
+    - title: Fast Runtime
+      details: Web Components offered a solution by pushing more work to the browser for better performance.
+    - title: Open Source
+      link: /guide#contribute
+      details: All developers are welcome to contribute code and use our library in their projects.
 ---

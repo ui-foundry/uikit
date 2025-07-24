@@ -31,12 +31,11 @@ const sidebarsGuides = (): DefaultTheme.SidebarItem[] => [
 ]
 
 export default defineConfig({
-    title: 'My Awesome Project',
+    title: 'UiKit - UIFoundry',
     description: 'A VitePress Site',
     lastUpdated: true,
     ignoreDeadLinks: true,
     cleanUrls: true,
-    titleTemplate: ':title - UiKit',
     srcDir: './src',
     themeConfig: {
         siteTitle: 'UiKit',
