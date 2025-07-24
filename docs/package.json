@@ -2,7 +2,8 @@
     "name": "docs",
     "version": "0.0.0",
     "scripts": {
-        "dev": "vitepress dev"
+        "dev": "vitepress dev",
+        "build": "vitepress build"
     },
     "dependencies": {
         "vitepress": "latest",

@@ -31,14 +31,15 @@ const sidebarsGuides = (): DefaultTheme.SidebarItem[] => [
 ]
 
 export default defineConfig({
-    title: 'UiKit - UIFoundry',
+    title: 'UIKit',
     description: 'A VitePress Site',
     lastUpdated: true,
     ignoreDeadLinks: true,
     cleanUrls: true,
     srcDir: './src',
+    base: '/uikit/',
     themeConfig: {
-        siteTitle: 'UiKit',
+        siteTitle: 'UIKit',
         socialLinks: [{ icon: 'github', link: 'https://github.com/ui-foundry' }],
         search: {
             provider: 'local',

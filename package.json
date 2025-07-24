@@ -17,6 +17,7 @@
         "start:uikit": "pnpm --filter @uifoundry/uikit run start",
         "build": "pnpm --filter=./packages/* build",
         "version-packages": "pnpm changeset version",
+        "docs:deploy": "pnpm --filter docs build && gh-pages -d docs/.vitepress/dist",
         "clean": "run-s clean:*",
         "clean:build": "pnpm dlx rimraf .stencil dist",
         "clean:modules": "pnpm dlx rimraf ./node_modules ./**/node_modules ./packages/**/node_modules ./examples/**/node_modules"
@@ -37,6 +38,7 @@
         "eslint": "^9.31.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-prettier": "^5.5.3",
+        "gh-pages": "^6.3.0",
         "globals": "^16.3.0",
         "husky": "^9.1.7",
         "jsonc-eslint-parser": "^2.4.0",
