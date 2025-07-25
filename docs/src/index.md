@@ -1,5 +1,4 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -22,4 +21,18 @@ features:
     - title: Open Source
       link: /guide#contribute
       details: All developers are welcome to contribute code and use our library in their projects.
+
+integrations:
+    - title: JavaScript
+      icon: js.svg
+      path: /guide/javascript/
+    - title: React
+      icon: react.svg
+      path: /guide/react/
+    - title: Vue
+      icon: vuejs.svg
+      path: /guide/vue/
+    - title: Angular
+      icon: angular.svg
+      path: /guide/angular/
 ---

@@ -83,6 +83,10 @@ importers:
             vue:
                 specifier: ^3.5.18
                 version: 3.5.18(typescript@5.8.3)
+        devDependencies:
+            vitepress-plugin-tabs:
+                specifier: ^0.7.1
+                version: 0.7.1(vitepress@1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(@types/react@19.1.8)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3))(vue@3.5.18(typescript@5.8.3))
 
     examples/react-starter:
         dependencies:
@@ -5738,6 +5742,15 @@ packages:
             yaml:
                 optional: true
 
+    vitepress-plugin-tabs@0.7.1:
+        resolution:
+            {
+                integrity: sha512-jxJvsicxnMSIYX9b8mAFLD2nwyKUcMO10dEt4nDSbinZhM8cGvAmMFOHPdf6TBX6gYZRl+/++/iYHtoM14fERQ==,
+            }
+        peerDependencies:
+            vitepress: ^1.0.0
+            vue: ^3.5.0
+
     vitepress@1.6.3:
         resolution:
             {
@@ -9231,6 +9244,11 @@ snapshots:
             lightningcss: 1.30.1
             sass-embedded: 1.89.2
             yaml: 2.8.0
+
+    vitepress-plugin-tabs@0.7.1(vitepress@1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(@types/react@19.1.8)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3))(vue@3.5.18(typescript@5.8.3)):
+        dependencies:
+            vitepress: 1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(@types/react@19.1.8)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3)
+            vue: 3.5.18(typescript@5.8.3)
 
     vitepress@1.6.3(@algolia/client-search@5.32.0)(@types/node@24.0.15)(@types/react@19.1.8)(lightningcss@1.30.1)(postcss@8.5.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3):
         dependencies:
