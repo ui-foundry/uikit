@@ -25,6 +25,7 @@ testem.log
 .eslintcache
 .nx
 .npmrc
+.idea
 
 # System Files
 .DS_Store
