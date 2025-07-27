@@ -1,15 +1,23 @@
 {
     "name": "docs",
-    "version": "0.0.0",
+    "version": "1.0.0",
+    "type": "module",
     "scripts": {
-        "dev": "vitepress dev",
-        "build": "vitepress build"
+        "dev": "eleventy --serve",
+        "build": "eleventy"
     },
     "dependencies": {
-        "vitepress": "latest",
-        "vue": "^3.5.18"
+        "markdown-it": "^14.1.0",
+        "markdown-it-attrs": "^4.3.0",
+        "markdown-it-container": "^3.0.0",
+        "markdown-it-ins": "^3.0.1",
+        "markdown-it-kbd": "^2.2.2",
+        "markdown-it-mark": "^3.0.1"
     },
     "devDependencies": {
-        "vitepress-plugin-tabs": "^0.7.1"
-    }
+        "@11ty/eleventy": "^3.1.2",
+        "sass": "^1.89.2"
+    },
+    "license": "MIT",
+    "packageManager": "pnpm@10.12.3"
 }
