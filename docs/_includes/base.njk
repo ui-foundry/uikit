@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include 'head.njk' %}
+    </head>
+    <body class="docs">
+        <aside class="docs_sidebar">
+            {% include 'logo.njk' %}
+            <div class="navigation" id="nav-container">
+                {% include 'sidebar.njk' %}
+            </div>
+        </aside>
+        <main class="docs_content" id="main-content">
+            <article class="markdown">
+                {% block content %}
+                    {{ content | safe }}
+                {% endblock %}
+            </article>
+            {% if hasOutline %}
+                <aside slot="aside" id="outline" class="docs-outline">
+                    <nav id="outline-standard" class="outline-links">
+                        <h2>
+                            <a href="#content">{{ title }}</a>
+                        </h2>
+                    </nav>
+                </aside>
+            {% endif %}
+        </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () { // Add click handlers to all navigation links
+                document.querySelectorAll('.doc-aside-nav-links a').forEach(link => {
+                    link.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        const url = this.href;
+                        loadContent(url, this);
+                    });
+                });
+            });
+            function loadContent(url, activeLink) { // Update active state
+                document.querySelectorAll('.doc-aside-nav-links a').forEach(link => {
+                    link.classList.remove('doc-nav-link-active');
+                });
+                activeLink.classList.add('doc-nav-link-active');
+                // Load content via fetch
+                fetch(url)
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const newContent = doc.querySelector('#main-content');
+                        if (newContent) {
+                            document.getElementById('main-content').innerHTML = newContent.innerHTML;
+                            document.querySelector('main').scrollTop = 0;
+                            history.pushState({}, '', url);
+                        }
+                    })
+                    .catch(error => console.error('Error loading content:', error));
+            }
+        </script>
+    </body>
+</html>

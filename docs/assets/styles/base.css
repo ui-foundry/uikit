@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #1a1a1e;
+    color: #e8e8ec;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+a {
+    color: #69d0ff;
+    text-decoration: inherit;
+}
