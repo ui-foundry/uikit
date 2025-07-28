@@ -4,7 +4,7 @@
     "type": "module",
     "scripts": {
         "dev": "eleventy --serve",
-        "build": "eleventy"
+        "build": "eleventy && gh-pages -d dist"
     },
     "dependencies": {
         "markdown-it": "^14.1.0",
