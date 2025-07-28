@@ -1,0 +1,17 @@
+ *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    tab-size: 4;
+  }
+
+body {
+    opacity: 1;
+    transition: opacity 200ms ease-out;
+}
