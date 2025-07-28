@@ -17,7 +17,7 @@
         "start:uikit": "pnpm --filter @uifoundry/uikit run start",
         "build": "pnpm --filter=./packages/* build",
         "version-packages": "pnpm changeset version",
-        "docs:deploy": "pnpm --filter docs build && gh-pages -d docs/.vitepress/dist",
+        "docs:deploy": "pnpm --filter docs build && gh-pages -d docs/dist",
         "clean": "run-s clean:*",
         "clean:build": "pnpm dlx rimraf .stencil dist",
         "clean:modules": "pnpm dlx rimraf ./node_modules ./**/node_modules ./packages/**/node_modules ./examples/**/node_modules"

@@ -18,7 +18,7 @@ export default async function (eleventyConfig) {
 }
 
 export const config = {
-    pathPrefix: '/',
+    pathPrefix: '/uikit/',
     markdownTemplateEngine: 'njk',
     templateFormats: ['md', 'njk'],
     dir: {

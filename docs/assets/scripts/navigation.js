@@ -10,7 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 function loadContent(url, activeLink) {
-    // Update active state
+    // const loadingIndicator = document.getElementById('loading-indicator')
+    // loadingIndicator.style.display = 'block'
+
+    document.getElementById('main-content').innerHTML = 'loading...'
+
     document.querySelectorAll('.doc-aside-nav-links a').forEach((link) => {
         link.classList.remove('doc-nav-link-active')
     })
@@ -29,4 +33,7 @@ function loadContent(url, activeLink) {
             }
         })
         .catch((error) => console.error('Error loading content:', error))
+        .finally(() => {
+            // loadingIndicator.style.display = 'none'
+        })
 }
