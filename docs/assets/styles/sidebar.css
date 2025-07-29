@@ -15,6 +15,7 @@
     }
     & .version {
         font-size: 11px;
+        color: #6c6c74;
         letter-spacing: 0px;
     }
     & .desc {

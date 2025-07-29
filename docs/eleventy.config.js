@@ -14,6 +14,10 @@ export default async function (eleventyConfig) {
     })
 
     // Watch CSS files
+    eleventyConfig.addPassthroughCopy({
+        'node_modules/@uifoundry/uikit/dist/uikit/uikit.css': 'assets/uikit/core.css',
+    })
+    eleventyConfig.addPassthroughCopy({ 'node_modules/@uifoundry/uikit/dist/esm': 'assets/uikit' })
     eleventyConfig.addWatchTarget(`${assetsDir}/styles/**/*.css`)
 }
 
@@ -23,6 +27,7 @@ export const config = {
     templateFormats: ['md', 'njk'],
     dir: {
         input: 'pages',
+        data: '../_data',
         includes: '../_includes',
         layouts: '../_layouts',
         output: 'dist',

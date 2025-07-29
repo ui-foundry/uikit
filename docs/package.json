@@ -7,12 +7,7 @@
         "build": "eleventy && gh-pages -d dist"
     },
     "dependencies": {
-        "markdown-it": "^14.1.0",
-        "markdown-it-attrs": "^4.3.0",
-        "markdown-it-container": "^3.0.0",
-        "markdown-it-ins": "^3.0.1",
-        "markdown-it-kbd": "^2.2.2",
-        "markdown-it-mark": "^3.0.1"
+        "@uifoundry/uikit": "workspace:*"
     },
     "devDependencies": {
         "@11ty/eleventy": "^3.1.2",

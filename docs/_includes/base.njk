@@ -6,28 +6,33 @@
     <body class="docs">
         <aside class="docs_sidebar">
             {% include 'logo.njk' %}
-            <div class="navigation" id="nav-container">
-                {% include 'sidebar.njk' %}
-            </div>
+            <div class="navigation" id="nav-container">{% include 'sidebar.njk' %}</div>
         </aside>
         <main class="docs_content" id="main-content">
-            <div id="loading-indicator" style="display: none;">
+            <div id="loading-indicator" style="display: none">
                 <p>Loading...</p>
             </div>
-            <article class="markdown">
-                {% block content %}
+
+           
+            {% block content %}
+                {% if html %}
                     {{ content | safe }}
-                {% endblock %}
-            </article>
+                {% else %}
+                    <article class="markdown">
+                        {{ content | safe }}
+                    </article>
+                {% endif %}
+            {% endblock %}
+
             {# {% if hasOutline %}
-                            <aside slot="aside" id="outline" class="docs-outline">
-                                <nav id="outline-standard" class="outline-links">
-                                    <h2>
-                                        <a href="#content">{{ title }}</a>
-                                    </h2>
-                                </nav>
-                            </aside>
-                        {% endif %} #}
+            <aside slot="aside" id="outline" class="docs-outline">
+                <nav id="outline-standard" class="outline-links">
+                    <h2>
+                        <a href="#content">{{ title }}</a>
+                    </h2>
+                </nav>
+            </aside>
+            {% endif %} #}
         </main>
     </body>
 </html>
