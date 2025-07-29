@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Svelte Integration</title>
+<!-- styles  -->
+<link rel="stylesheet" href="/uikit/assets/uikit/core.css" />
+<link rel="stylesheet" href="/uikit/assets/styles/docs.css" />
 
-<link rel="stylesheet" href="/uikit/assets/styles/docs.css"/> 
-
-
+<!-- scripts -->
+<script type="module">
+    import { defineCustomElements } from '/uikit/assets/uikit/loader.js'
+    defineCustomElements()
+</script>
 <script src="/uikit/assets/scripts/navigation.js"></script>
 
     </head>
     <body class="docs">
         <aside class="docs_sidebar">
             <div class="doc-logo">
-    <img src="/uikit/assets/images/logo.png" width="60" alt="UIKit Logo" class="doc-logo">
+    <img src="/uikit/assets/images/logo.png" width="60" alt="UIKit Logo" class="doc-logo" />
     <div class="wrapper">
-        <p class="text">UIKit
+        <p class="text">
+            UIKit
             <code class="version">v1.0.0.beta-3</code>
         </p>
         <p class="desc">A design system for everyone.</p>
     </div>
 </div>
-            <div class="navigation" id="nav-container">
-                <nav class="doc-aside-nav">
+
+            <div class="navigation" id="nav-container"><nav class="doc-aside-nav">
     <h2>Getting Started</h2>
     <div class="doc-aside-nav-links">
+        <a href="/uikit/">Home</a>
         <a href="/uikit/guide">Introduction</a>
         <a href="/uikit/guide/design">Design</a>
         <a href="/uikit/guide/architecture">Architecture</a>
@@ -77,19 +84,24 @@
         <a href="/uikit/tokens/elevation">Elevation</a>
     </div>
 </nav>
-            </div>
+</div>
         </aside>
         <main class="docs_content" id="main-content">
-            <div id="loading-indicator" style="display: none;">
+            <div id="loading-indicator" style="display: none">
                 <p>Loading...</p>
             </div>
-            <article class="markdown">
+
+           
+            
                 
-                    <p>&lt;</p>
+                    <article class="markdown">
+                        <p>&lt;</p>
 <h1>Svelte Integration</h1>
 
+                    </article>
                 
-            </article>
+            
+
             
         </main>
     </body>

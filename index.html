@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Introduction</title>
+<!-- styles  -->
+<link rel="stylesheet" href="/uikit/assets/uikit/core.css" />
+<link rel="stylesheet" href="/uikit/assets/styles/docs.css" />
 
-<link rel="stylesheet" href="/uikit/assets/styles/docs.css"/> 
-
-
+<!-- scripts -->
+<script type="module">
+    import { defineCustomElements } from '/uikit/assets/uikit/loader.js'
+    defineCustomElements()
+</script>
 <script src="/uikit/assets/scripts/navigation.js"></script>
 
     </head>
     <body class="docs">
         <aside class="docs_sidebar">
             <div class="doc-logo">
-    <img src="/uikit/assets/images/logo.png" width="60" alt="UIKit Logo" class="doc-logo">
+    <img src="/uikit/assets/images/logo.png" width="60" alt="UIKit Logo" class="doc-logo" />
     <div class="wrapper">
-        <p class="text">UIKit
+        <p class="text">
+            UIKit
             <code class="version">v1.0.0.beta-3</code>
         </p>
         <p class="desc">A design system for everyone.</p>
     </div>
 </div>
-            <div class="navigation" id="nav-container">
-                <nav class="doc-aside-nav">
+
+            <div class="navigation" id="nav-container"><nav class="doc-aside-nav">
     <h2>Getting Started</h2>
     <div class="doc-aside-nav-links">
+        <a href="/uikit/">Home</a>
         <a href="/uikit/guide">Introduction</a>
         <a href="/uikit/guide/design">Design</a>
         <a href="/uikit/guide/architecture">Architecture</a>
@@ -77,21 +84,81 @@
         <a href="/uikit/tokens/elevation">Elevation</a>
     </div>
 </nav>
-            </div>
+</div>
         </aside>
         <main class="docs_content" id="main-content">
-            <div id="loading-indicator" style="display: none;">
+            <div id="loading-indicator" style="display: none">
                 <p>Loading...</p>
             </div>
-            <article class="markdown">
-                
-                    <h1>Introduction</h1>
-<p>The <strong>UIkit Library</strong> is an open-source project focused on building modern web applications. It is developed in alignment with the UI Foundry styling guidelines to ensure a consistent and unified user interface across all components.</p>
-<p>Our technology stack is built on established web standards and industry best practices. Simplicity and developer experience are key guiding principles in our technical decisions. To align with these goals, we have adopted <a href="https://en.wikipedia.org/wiki/Web_Components">Web Components</a> as the foundation of our UI architecture. UIkit Library are natively supported by all major modern browsers, ensuring broad compatibility and reducing dependency overhead.</p>
-<p>Additionally, the project is developed with full support for <a href="https://www.typescriptlang.org">TypeScript</a>, enabling static type checking, improved developer tooling, and greater maintainability of the codebase.</p>
 
+           
+            
                 
-            </article>
+                    
+<style>
+.tagline {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+        & > a {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: inherit;
+        padding: 4px 14px;
+        border-radius: 9999px;
+        height: 40px;
+        transition: background-color 0.2s ease-in-out;
+        &:hover {
+            background-color: #8f8f8f;
+        }
+    }
+}
+</style>
+
+<div class="container">
+    <h1 style="font-size: 56px;line-height: 64px;">UIKit</h1>
+    <p style="font-size: 36px;line-height: 44px;">Design. Shared. Simplified</p>
+    <p style="font-size: 24px;line-height: 32px;padding-top: 1rem;">Ready to use Components in alignment with the UIFoundry Styleguide</p>
+    <div class="uk-d-flex" style="gap: 1rem;padding-top: 1rem;">
+        <a href="/uikit/guide">Get Started</a>
+        <a href="components/avatar/">Explore Components</a>
+    </div>
+
+    <div class="tagline">
+    
+        <a href="">
+        <img width="24" src="/uikit/assets/images/js.svg" />
+        <abbr>JavaScript</abbr>
+        </a>
+    
+        <a href="">
+        <img width="24" src="/uikit/assets/images/react.svg" />
+        <abbr>React</abbr>
+        </a>
+    
+        <a href="">
+        <img width="24" src="/uikit/assets/images/vuejs.svg" />
+        <abbr>Vue</abbr>
+        </a>
+    
+        <a href="">
+        <img width="24" src="/uikit/assets/images/angular.svg" />
+        <abbr>Angular</abbr>
+        </a>
+    
+        <a href="">
+        <img width="24" src="/uikit/assets/images/svelte.svg" />
+        <abbr>Svelte</abbr>
+        </a>
+    
+    </div>
+</div>
+                
+            
+
             
         </main>
     </body>
