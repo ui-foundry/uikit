@@ -1,0 +1,47 @@
+---
+title: Introduction
+layout: page
+html: true
+---
+
+<style>
+.tagline {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+        & > a {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: inherit;
+        padding: 4px 14px;
+        border-radius: 9999px;
+        height: 40px;
+        transition: background-color 0.2s ease-in-out;
+        &:hover {
+            background-color: #8f8f8f;
+        }
+    }
+}
+</style>
+
+<div class="container">
+    <h1 style="font-size: 56px;line-height: 64px;">UIKit</h1>
+    <p style="font-size: 36px;line-height: 44px;">Design. Shared. Simplified</p>
+    <p style="font-size: 24px;line-height: 32px;padding-top: 1rem;">Ready to use Components in alignment with the UIFoundry Styleguide</p>
+    <div class="uk-d-flex" style="gap: 1rem;padding-top: 1rem;">
+        <a href="/uikit/guide">Get Started</a>
+        <a href="components/avatar/">Explore Components</a>
+    </div>
+
+    <div class="tagline">
+    {% for fw in frameworks %}
+        <a href="">
+        <img width="24" src="/uikit/assets/images/{{ fw.icon }}.svg" />
+        <abbr>{{ fw.name }}</abbr>
+        </a>
+    {% endfor %}
+    </div>
+</div>

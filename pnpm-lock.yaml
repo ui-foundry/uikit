@@ -77,24 +77,9 @@ importers:
 
     docs:
         dependencies:
-            markdown-it:
-                specifier: ^14.1.0
-                version: 14.1.0
-            markdown-it-attrs:
-                specifier: ^4.3.0
-                version: 4.3.1(markdown-it@14.1.0)
-            markdown-it-container:
-                specifier: ^3.0.0
-                version: 3.0.0
-            markdown-it-ins:
-                specifier: ^3.0.1
-                version: 3.0.1
-            markdown-it-kbd:
-                specifier: ^2.2.2
-                version: 2.2.2
-            markdown-it-mark:
-                specifier: ^3.0.1
-                version: 3.0.1
+            '@uifoundry/uikit':
+                specifier: workspace:*
+                version: link:../packages/core
         devDependencies:
             '@11ty/eleventy':
                 specifier: ^3.1.2
@@ -3934,40 +3919,6 @@ packages:
                 integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==,
             }
         engines: { node: '>=8' }
-
-    markdown-it-attrs@4.3.1:
-        resolution:
-            {
-                integrity: sha512-/ko6cba+H6gdZ0DOw7BbNMZtfuJTRp9g/IrGIuz8lYc/EfnmWRpaR3CFPnNbVz0LDvF8Gf1hFGPqrQqq7De0rg==,
-            }
-        engines: { node: '>=6' }
-        peerDependencies:
-            markdown-it: '>= 9.0.0'
-
-    markdown-it-container@3.0.0:
-        resolution:
-            {
-                integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==,
-            }
-
-    markdown-it-ins@3.0.1:
-        resolution:
-            {
-                integrity: sha512-32SSfZqSzqyAmmQ4SHvhxbFqSzPDqsZgMHDwxqPzp+v+t8RsmqsBZRG+RfRQskJko9PfKC2/oxyOs4Yg/CfiRw==,
-            }
-
-    markdown-it-kbd@2.2.2:
-        resolution:
-            {
-                integrity: sha512-J5qVHtLuxh1HTJcl5xhopiFpf6fnHIBY0OO1akGHf2KW0VwQLYhsip/bkiTJFoEZqhssxQuUBY1LO5/SbCrB6g==,
-            }
-        engines: { node: '>=6.0.0' }
-
-    markdown-it-mark@3.0.1:
-        resolution:
-            {
-                integrity: sha512-HyxjAu6BRsdt6Xcv6TKVQnkz/E70TdGXEFHRYBGLncRE9lBFwDNLVtFojKxjJWgJ+5XxUwLaHXy+2sGBbDn+4A==,
-            }
 
     markdown-it@14.1.0:
         resolution:
@@ -8098,18 +8049,6 @@ snapshots:
     make-dir@3.1.0:
         dependencies:
             semver: 6.3.1
-
-    markdown-it-attrs@4.3.1(markdown-it@14.1.0):
-        dependencies:
-            markdown-it: 14.1.0
-
-    markdown-it-container@3.0.0: {}
-
-    markdown-it-ins@3.0.1: {}
-
-    markdown-it-kbd@2.2.2: {}
-
-    markdown-it-mark@3.0.1: {}
 
     markdown-it@14.1.0:
         dependencies:

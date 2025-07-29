@@ -1,0 +1,7 @@
+[
+    { "name": "JavaScript", "icon": "js" },
+    { "name": "React", "icon": "react" },
+    { "name": "Vue", "icon": "vuejs" },
+    { "name": "Angular", "icon": "angular" },
+    { "name": "Svelte", "icon": "svelte" }
+]
