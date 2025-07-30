@@ -1,3 +1,13 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    text-rendering: optimizeLegibility;
+    background: #1a1a1e;
+    line-height: 1.6;
+    color: #e8e8ec;
+    font-weight: var(--font-weight-regular);
+}
