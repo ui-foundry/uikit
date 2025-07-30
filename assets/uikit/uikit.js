@@ -1,5 +1,5 @@
-import { B as BUILD, c as consoleDevInfo, H, w as win, N as NAMESPACE, p as promiseResolve, g as globalScripts, b as bootstrapLazy } from './index-D21SvVqK.js';
-export { s as setNonce } from './index-D21SvVqK.js';
+import { B as BUILD, c as consoleDevInfo, H, w as win, N as NAMESPACE, p as promiseResolve, g as globalScripts, b as bootstrapLazy } from './index-gcGTeu1N.js';
+export { s as setNonce } from './index-gcGTeu1N.js';
 
 /*
  Stencil Client Patch Browser v4.36.1 | MIT Licensed | https://stenciljs.com
@@ -43,7 +43,7 @@ var patchCloneNodeFix = (HTMLElementPrototype) => {
 
 patchBrowser().then(async (options) => {
   await globalScripts();
-  return bootstrapLazy([["uk-alert",[[260,"uk-alert",{"type":[1]}]]]], options);
+  return bootstrapLazy([["uk-alert",[[260,"uk-alert",{"type":[1]}]]],["uk-avatar",[[256,"uk-avatar",{"image":[1],"alt":[1],"initials":[1],"radius":[1],"size":[2],"hasError":[32]}]]]], options);
 });
 //# sourceMappingURL=uikit.js.map
 
