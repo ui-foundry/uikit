@@ -16,9 +16,9 @@ function loadContent(url, activeLink) {
     document.getElementById('main-content').innerHTML = 'loading...'
 
     document.querySelectorAll('.doc-aside-nav-links a').forEach((link) => {
-        link.classList.remove('doc-nav-link-active')
+        link.classList.remove('active')
     })
-    activeLink.classList.add('doc-nav-link-active')
+    activeLink.classList.add('active')
     // Load content via fetch
     fetch(url)
         .then((response) => response.text())

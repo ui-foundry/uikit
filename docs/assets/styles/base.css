@@ -4,6 +4,16 @@
     padding: 0;
 }
 
+:root {
+    --bg-color: #fff;
+    --text-color: #495057;
+}
+
+:root[data-theme='dark'] {
+    --bg-color: #242424;
+    --text-color: #c9c9c9;
+}
+
 html,
 body {
     width: 100%;
@@ -12,13 +22,24 @@ body {
 
 body {
     font-family: system-ui, sans-serif;
-    background: #1a1a1e;
-    color: #e8e8ec;
+    background: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
     font-weight: 400;
+    font-size: 15px;
 }
 
 a {
-    color: #69d0ff;
+    color: #228be6;
     text-decoration: inherit;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 3px;
+    right: 8px;
+    background: transparent;
+    border: none;
+    font-size: 1.75rem;
+    cursor: pointer;
 }

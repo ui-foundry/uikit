@@ -12,8 +12,6 @@
             <div id="loading-indicator" style="display: none">
                 <p>Loading...</p>
             </div>
-
-           
             {% block content %}
                 {% if html %}
                     {{ content | safe }}
@@ -23,7 +21,6 @@
                     </article>
                 {% endif %}
             {% endblock %}
-
             {# {% if hasOutline %}
             <aside slot="aside" id="outline" class="docs-outline">
                 <nav id="outline-standard" class="outline-links">

@@ -15,8 +15,9 @@
     flex-direction: column;
     height: 100%;
     width: 320px;
-    border-right: 1px solid #36363b;
+    border-right: 1px solid light-dark(#dee2e6, #36363b);
     overflow: auto;
+    position: relative;
 }
 
 .docs_content {
