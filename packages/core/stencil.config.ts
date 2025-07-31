@@ -1,6 +1,7 @@
 import { Config } from '@stencil/core';
 import { resolve } from 'node:path';
 import { reactOutputTarget } from '@stencil/react-output-target';
+import { vueOutputTarget } from '@stencil/vue-output-target';
 
 const resolvePath = (path: string) => resolve(__dirname, path).replace(/\\/g, '/');
 
@@ -13,6 +14,10 @@ export const config: Config = {
 		reactOutputTarget({
 			outDir: resolvePath('../react/src/'),
 		}),
+		vueOutputTarget({
+			componentCorePackage: '@uifoundry/uikit',
+			proxiesFile: resolvePath('../vue/src/components.ts'),
+		}),
 		{ type: 'dist', esmLoaderPath: resolvePath('loader') },
 		{
 			type: 'dist-custom-elements',
@@ -20,7 +25,7 @@ export const config: Config = {
 			externalRuntime: false,
 		},
 		{ type: 'docs-readme' },
-		{ type: 'docs-json', file: 'docs/go-ui.json' },
+		{ type: 'docs-json', file: 'docs/uikit.json' },
 		{
 			type: 'www',
 			serviceWorker: false,
