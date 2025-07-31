@@ -1,7 +1,7 @@
 {
 	"name": "@uifoundry/uikit-react",
 	"version": "1.0.0",
-	"description": "React specific wrapper for @uifoundry/uikit components",
+	"description": "React wrapper components for @uifoundry/uikit",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
 	"types": "dist/types/index.d.ts",
@@ -17,7 +17,9 @@
 		"watch": "pnpm tsc --watch"
 	},
 	"dependencies": {
-		"@stencil/react-output-target": "^1.2.0",
+		"@stencil/react-output-target": "^1.2.0"
+	},
+	"peerDependencies": {
 		"@uifoundry/uikit": "workspace:*"
 	},
 	"devDependencies": {
