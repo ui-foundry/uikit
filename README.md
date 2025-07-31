@@ -7,7 +7,11 @@
 Whether you're building internal tools, public-facing apps, or scalable design systems, UIFoundry offers a solid foundation for consistency, accessibility, and speed across teams.
 
 <ul>
-  <li>🔧 Built for developers.</li>
+  <li>🔍 Pattern-first approach</li>
+  <li>🌐 Framework-agnostic by design</li>
+  <li>🔄 Highly adaptable and flexible</li>
+  <li>♿ Accessibility</li>
+  <li>📦 Modular and reusable components</li>  <li>🔧 Built for developers.</li>
   <li>🎨 Powered by design.</li>
   <li>🚀 Made to scale.</li>
-</ul
+</ul>

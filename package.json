@@ -1,0 +1,24 @@
+{
+	"name": "uikit-workspace",
+	"version": "1.0.0",
+	"description": "A design system for everyone",
+	"scripts": {
+		"prepare": "husky install",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"husky": "^9.1.7",
+		"lint-staged": "^16.1.2",
+		"prettier": "^3.6.2"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,html,scss}": [
+			"prettier --write"
+		]
+	},
+	"engines": {
+		"node": ">=20.10.0",
+		"pnpm": ">=9.4.0"
+	},
+	"packageManager": "pnpm@10.12.4"
+}
