@@ -1,0 +1,28 @@
+:root {
+    --spacing: 4px;
+    --grid-columns: 16;
+
+    /* Fonts */
+    --font-size-base: calc(var(--spacing) * 4);
+    --font-family: system-ui, sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Screens */
+    --screen-xs: 576px;
+    --screen-sm: 768px;
+    --screen-md: 992px;
+    --screen-lg: 1200px;
+    --screen-xlg: 1440px;
+    --screen-fhd: 1920px;
+    --screen-2k: 2048px;
+    --screen-4k: 3840px;
+    --screen-max-container: 1136px;
+
+    /* Radius */
+    --radius-sm: var(--spacing);
+    --radius-md: calc(var(--spacing) * 2);
+    --radius-lg: calc(var(--spacing) * 3);
+    --radius-full: 50%;
+    --radius-pill: 9999px;
+}

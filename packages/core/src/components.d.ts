@@ -12,6 +12,28 @@ export namespace Components {
          */
         "type"?: 'info' | 'success' | 'warning' | 'danger';
     }
+    interface UkAvatar {
+        /**
+          * @default ''
+         */
+        "alt": string;
+        /**
+          * @default ''
+         */
+        "image": string;
+        /**
+          * @default ''
+         */
+        "initials": string;
+        /**
+          * @default 'md'
+         */
+        "radius": 'none' | 'sm' | 'md' | 'full';
+        /**
+          * @default 32
+         */
+        "size": number;
+    }
 }
 declare global {
     interface HTMLUkAlertElement extends Components.UkAlert, HTMLStencilElement {
@@ -20,8 +42,15 @@ declare global {
         prototype: HTMLUkAlertElement;
         new (): HTMLUkAlertElement;
     };
+    interface HTMLUkAvatarElement extends Components.UkAvatar, HTMLStencilElement {
+    }
+    var HTMLUkAvatarElement: {
+        prototype: HTMLUkAvatarElement;
+        new (): HTMLUkAvatarElement;
+    };
     interface HTMLElementTagNameMap {
         "uk-alert": HTMLUkAlertElement;
+        "uk-avatar": HTMLUkAvatarElement;
     }
 }
 declare namespace LocalJSX {
@@ -31,8 +60,31 @@ declare namespace LocalJSX {
          */
         "type"?: 'info' | 'success' | 'warning' | 'danger';
     }
+    interface UkAvatar {
+        /**
+          * @default ''
+         */
+        "alt"?: string;
+        /**
+          * @default ''
+         */
+        "image"?: string;
+        /**
+          * @default ''
+         */
+        "initials"?: string;
+        /**
+          * @default 'md'
+         */
+        "radius"?: 'none' | 'sm' | 'md' | 'full';
+        /**
+          * @default 32
+         */
+        "size"?: number;
+    }
     interface IntrinsicElements {
         "uk-alert": UkAlert;
+        "uk-avatar": UkAvatar;
     }
 }
 export { LocalJSX as JSX };
@@ -40,6 +92,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "uk-alert": LocalJSX.UkAlert & JSXBase.HTMLAttributes<HTMLUkAlertElement>;
+            "uk-avatar": LocalJSX.UkAvatar & JSXBase.HTMLAttributes<HTMLUkAvatarElement>;
         }
     }
 }
