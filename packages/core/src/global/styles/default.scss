@@ -1,8 +1,0 @@
-@use './utilities' as *;
-@use './mixins' as *;
-
-@use './tokens';
-@use './reset';
-@use './base';
-
-@include generate-utilities($utilities);

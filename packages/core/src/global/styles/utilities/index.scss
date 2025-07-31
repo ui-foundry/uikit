@@ -1,5 +1,0 @@
-@use 'sass:map';
-@use './display' as *;
-@use './flex' as *;
-
-$utilities: map.merge($utilities-display, map.merge($utilities-flex, $utilities-flex-direction));
