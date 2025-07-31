@@ -1,0 +1,36 @@
+{
+	"name": "@uifoundry/uikit",
+	"version": "0.0.1",
+	"description": "A design system for everyone.",
+	"main": "dist/index.cjs.js",
+	"module": "dist/index.mjs",
+	"es2015": "dist/esm/index.js",
+	"es2017": "dist/esm/index.js",
+	"types": "dist/types/index.d.ts",
+	"collection": "dist/collection/collection-manifest.json",
+	"collection:main": "dist/collection/index.js",
+	"unpkg": "dist/uikit/uikit.esm.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ui-foundry/uikit.git"
+	},
+	"files": [
+		"dist/"
+	],
+	"scripts": {
+		"start": "stencil build --dev --watch",
+		"build": "stencil build",
+		"generate": "stencil generate"
+	},
+	"devDependencies": {
+		"@stencil/core": "^4.27.1",
+		"@stencil/react-output-target": "^1.2.0",
+		"@stencil/vue-output-target": "^0.11.8",
+		"@types/jest": "^29.5.14",
+		"@types/node": "^22.13.5",
+		"jest": "^29.7.0",
+		"jest-cli": "^29.7.0",
+		"puppeteer": "^24.3.0"
+	},
+	"license": "MIT"
+}

@@ -3,6 +3,9 @@
 .npmrc
 
 # compiled output
+dist/
+loader/
+demo/
 packages/react/src/components.ts
 
 dist
