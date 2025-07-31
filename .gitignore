@@ -32,5 +32,4 @@ testem.log
 Thumbs.db
 
 # Documentation
-docs/.vitepress/cache
-docs/.vitepress/dist
+docs/.nuxt
