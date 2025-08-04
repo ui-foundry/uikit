@@ -1,10 +1,5 @@
+@import url('./reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
 
 html,
 body {
@@ -16,13 +11,8 @@ body {
 	width: 100%;
 }
 
-#__nuxt {
-	display: flex;
+#app {
 	height: 100%;
-	overflow: hidden;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
+	width: 100%;
+	display: flex;
 }

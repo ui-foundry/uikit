@@ -29,6 +29,7 @@ testem.log
 .nx
 .npmrc
 .idea
+cache/
 
 # System Files
 .DS_Store
