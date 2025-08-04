@@ -38,6 +38,9 @@ importers:
 
   docs:
     devDependencies:
+      '@unocss/preset-typography':
+        specifier: ^66.4.1
+        version: 66.4.1
       '@unocss/vite':
         specifier: ^66.4.1
         version: 66.4.1(vite@5.4.19(@types/node@22.17.0)(terser@5.43.1))
@@ -47,9 +50,6 @@ importers:
       vitepress:
         specifier: ^1.6.3
         version: 1.6.3(@algolia/client-search@5.35.0)(@types/node@22.17.0)(fuse.js@7.1.0)(jwt-decode@4.0.0)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.43.1)(typescript@5.9.2)
-      vue:
-        specifier: ^3.5.18
-        version: 3.5.18(typescript@5.9.2)
 
   packages/core:
     devDependencies:

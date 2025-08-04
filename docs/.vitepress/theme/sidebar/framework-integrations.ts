@@ -4,11 +4,11 @@ export const SideBarFrameworkIntegrations: DefaultTheme.SidebarItem[] = [
 	{
 		text: 'Framework Integrations',
 		items: [
-			{ text: 'JavaScript', link: '/' },
-			{ text: 'React', link: '/guides/getting-started' },
-			{ text: 'Vue', link: '/components' },
-			{ text: 'Angular', link: '/changelog' },
-			{ text: 'Svelte', link: '/changelog' },
+			{ text: 'JavaScript', link: '/frameworks/javascript' },
+			{ text: 'React', link: '/frameworks/react' },
+			{ text: 'Vue', link: '/frameworks/vue' },
+			{ text: 'Angular', link: '/frameworks/angular' },
+			{ text: 'Svelte', link: '/frameworks/svelte' },
 		],
 	},
 ];
