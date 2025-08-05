@@ -5,56 +5,88 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
+import { Property } from 'csstype';
+export { Property } from 'csstype';
 export namespace Components {
-	interface MyComponent {
+	interface UiAvatar {
 		/**
-		 * The first name
+		 * @default ''
 		 */
-		first: string;
+		alt: string;
 		/**
-		 * The last name
+		 * @default ''
 		 */
-		last: string;
+		image: string;
 		/**
-		 * The middle name
+		 * @default ''
 		 */
-		middle: string;
+		initials: string;
+		/**
+		 * @default 'md'
+		 */
+		radius: 'none' | 'sm' | 'md' | 'full';
+		/**
+		 * @default 32
+		 */
+		size: number;
+	}
+	interface UiFlex {
+		gap?: Property.Gap<number>;
 	}
 }
 declare global {
-	interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-	var HTMLMyComponentElement: {
-		prototype: HTMLMyComponentElement;
-		new (): HTMLMyComponentElement;
+	interface HTMLUiAvatarElement extends Components.UiAvatar, HTMLStencilElement {}
+	var HTMLUiAvatarElement: {
+		prototype: HTMLUiAvatarElement;
+		new (): HTMLUiAvatarElement;
+	};
+	interface HTMLUiFlexElement extends Components.UiFlex, HTMLStencilElement {}
+	var HTMLUiFlexElement: {
+		prototype: HTMLUiFlexElement;
+		new (): HTMLUiFlexElement;
 	};
 	interface HTMLElementTagNameMap {
-		'my-component': HTMLMyComponentElement;
+		'ui-avatar': HTMLUiAvatarElement;
+		'ui-flex': HTMLUiFlexElement;
 	}
 }
 declare namespace LocalJSX {
-	interface MyComponent {
+	interface UiAvatar {
 		/**
-		 * The first name
+		 * @default ''
 		 */
-		first?: string;
+		alt?: string;
 		/**
-		 * The last name
+		 * @default ''
 		 */
-		last?: string;
+		image?: string;
 		/**
-		 * The middle name
+		 * @default ''
 		 */
-		middle?: string;
+		initials?: string;
+		/**
+		 * @default 'md'
+		 */
+		radius?: 'none' | 'sm' | 'md' | 'full';
+		/**
+		 * @default 32
+		 */
+		size?: number;
+	}
+	interface UiFlex {
+		gap?: Property.Gap<number>;
 	}
 	interface IntrinsicElements {
-		'my-component': MyComponent;
+		'ui-avatar': UiAvatar;
+		'ui-flex': UiFlex;
 	}
 }
 export { LocalJSX as JSX };
 declare module '@stencil/core' {
 	export namespace JSX {
 		interface IntrinsicElements {
-			'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+			'ui-avatar': LocalJSX.UiAvatar & JSXBase.HTMLAttributes<HTMLUiAvatarElement>;
+			'ui-flex': LocalJSX.UiFlex & JSXBase.HTMLAttributes<HTMLUiFlexElement>;
 		}
 	}
 }

@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 import { resolve } from 'node:path';
 import { reactOutputTarget } from '@stencil/react-output-target';
 import { vueOutputTarget } from '@stencil/vue-output-target';
+import { sass } from '@stencil/sass';
 
 const resolvePath = (path: string) => resolve(__dirname, path).replace(/\\/g, '/');
 
@@ -10,6 +11,8 @@ export const config: Config = {
 	buildDist: true,
 	enableCache: true,
 	cacheDir: resolvePath('../../.stencil'),
+	globalStyle: resolvePath('./src/styles/index.scss'),
+	plugins: [sass({ outputStyle: 'compressed' })],
 	outputTargets: [
 		reactOutputTarget({
 			outDir: resolvePath('../react/src/'),

@@ -1,14 +1,21 @@
 <!doctype html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="en" data-color-scheme="dark" style="color-scheme: dark">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-		<title>Stencil Component Starter</title>
+		<title>Component Starter</title>
+
+		<link rel="stylesheet" href="/build/uikit.css" />
 
 		<script type="module" src="/build/uikit.esm.js"></script>
 		<script nomodule src="/build/uikit.js"></script>
 	</head>
-	<body>
-		<my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-component>
+	<body style="padding: 30px">
+		<ui-flex gap="8">
+			<ui-avatar initials="RA" radius="none" size="32"></ui-avatar>
+			<ui-avatar initials="RA" radius="sm" size="40"></ui-avatar>
+			<ui-avatar initials="RA" radius="md" size="48"></ui-avatar>
+			<ui-avatar initials="RA" radius="full" size="56"></ui-avatar>
+		</ui-flex>
 	</body>
 </html>
