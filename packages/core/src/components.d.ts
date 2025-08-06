@@ -5,94 +5,90 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Property } from "csstype";
+export { Property } from "csstype";
 export namespace Components {
-    interface UkAlert {
+    interface UiAvatar {
         /**
-          * @default 'success'
-         */
-        "type"?: 'info' | 'success' | 'warning' | 'danger';
-    }
-    interface UkAvatar {
-        /**
-          * @default ''
+          * @default ""
          */
         "alt": string;
         /**
-          * @default ''
+          * @default ""
          */
         "image": string;
         /**
-          * @default ''
+          * @default ""
          */
         "initials": string;
         /**
-          * @default 'md'
+          * @default "md"
          */
-        "radius": 'none' | 'sm' | 'md' | 'full';
+        "radius": "none" | "xs" | "sm" | "md" | "full";
         /**
           * @default 32
          */
         "size": number;
     }
+    interface UiFlex {
+        "gap"?: Property.Gap<number>;
+    }
 }
 declare global {
-    interface HTMLUkAlertElement extends Components.UkAlert, HTMLStencilElement {
+    interface HTMLUiAvatarElement extends Components.UiAvatar, HTMLStencilElement {
     }
-    var HTMLUkAlertElement: {
-        prototype: HTMLUkAlertElement;
-        new (): HTMLUkAlertElement;
+    var HTMLUiAvatarElement: {
+        prototype: HTMLUiAvatarElement;
+        new (): HTMLUiAvatarElement;
     };
-    interface HTMLUkAvatarElement extends Components.UkAvatar, HTMLStencilElement {
+    interface HTMLUiFlexElement extends Components.UiFlex, HTMLStencilElement {
     }
-    var HTMLUkAvatarElement: {
-        prototype: HTMLUkAvatarElement;
-        new (): HTMLUkAvatarElement;
+    var HTMLUiFlexElement: {
+        prototype: HTMLUiFlexElement;
+        new (): HTMLUiFlexElement;
     };
     interface HTMLElementTagNameMap {
-        "uk-alert": HTMLUkAlertElement;
-        "uk-avatar": HTMLUkAvatarElement;
+        "ui-avatar": HTMLUiAvatarElement;
+        "ui-flex": HTMLUiFlexElement;
     }
 }
 declare namespace LocalJSX {
-    interface UkAlert {
+    interface UiAvatar {
         /**
-          * @default 'success'
-         */
-        "type"?: 'info' | 'success' | 'warning' | 'danger';
-    }
-    interface UkAvatar {
-        /**
-          * @default ''
+          * @default ""
          */
         "alt"?: string;
         /**
-          * @default ''
+          * @default ""
          */
         "image"?: string;
         /**
-          * @default ''
+          * @default ""
          */
         "initials"?: string;
         /**
-          * @default 'md'
+          * @default "md"
          */
-        "radius"?: 'none' | 'sm' | 'md' | 'full';
+        "radius"?: "none" | "xs" | "sm" | "md" | "full";
         /**
           * @default 32
          */
         "size"?: number;
     }
+    interface UiFlex {
+        "gap"?: Property.Gap<number>;
+    }
     interface IntrinsicElements {
-        "uk-alert": UkAlert;
-        "uk-avatar": UkAvatar;
+        "ui-avatar": UiAvatar;
+        "ui-flex": UiFlex;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "uk-alert": LocalJSX.UkAlert & JSXBase.HTMLAttributes<HTMLUkAlertElement>;
-            "uk-avatar": LocalJSX.UkAvatar & JSXBase.HTMLAttributes<HTMLUkAvatarElement>;
+            "ui-avatar": LocalJSX.UiAvatar & JSXBase.HTMLAttributes<HTMLUiAvatarElement>;
+            "ui-flex": LocalJSX.UiFlex & JSXBase.HTMLAttributes<HTMLUiFlexElement>;
         }
     }
 }

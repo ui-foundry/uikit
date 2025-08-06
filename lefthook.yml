@@ -1,0 +1,23 @@
+pre-commit:
+  piped: true
+  commands:
+    "checking format & linting":
+      glob: "*.{js,ts,cjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      run: |
+        bunx biome check {staged_files} --write
+      stage_fixed: true
+      skip:
+        - merge
+        - rebase
+
+post-merge:
+  commands:
+    pnpm:
+      glob: "{package.json,pnpm-lock.yaml}"
+      run: bun install
+
+commit-msg:
+  commands:
+    commitlint:
+      run: |
+        bunx commitlint --edit {1}

@@ -1,50 +1,44 @@
-import { postcss } from '@stencil-community/postcss'
-import type { Config } from '@stencil/core'
-import { reactOutputTarget } from '@stencil/react-output-target'
-import { sass } from '@stencil/sass'
-import autoprefixer from 'autoprefixer'
-import { resolve } from 'node:path'
-import pxtorem from 'postcss-pxtorem'
+import { Config } from "@stencil/core";
+import { resolve } from "node:path";
+import { reactOutputTarget } from "@stencil/react-output-target";
+import { vueOutputTarget } from "@stencil/vue-output-target";
+import { sass } from "@stencil/sass";
 
-const resolvePath = (path: string) => resolve(__dirname, path).replace(/\\/g, '/')
+const resolvePath = (path: string) => resolve(__dirname, path).replace(/\\/g, "/");
 
 export const config: Config = {
-    namespace: 'uikit',
-    buildDist: true,
-    enableCache: true,
-    cacheDir: resolvePath('../../.stencil'),
-    sourceMap: true,
-    globalStyle: resolvePath('./src/global/styles/default.scss'),
-    plugins: [
-        sass({
-            outputStyle: 'compressed',
-        }),
-        postcss({
-            plugins: [
-                autoprefixer(),
-                pxtorem({
-                    propList: ['*'],
-                    selectorBlackList: [':root', 'html', 'body'],
-                    replace: true,
-                }),
-            ],
-        }),
-    ],
-    outputTargets: [
-        { type: 'dist', esmLoaderPath: '../loader' },
-        {
-            type: 'dist-custom-elements',
-            customElementsExportBehavior: 'bundle',
-            externalRuntime: false,
-        },
-        reactOutputTarget({
-            outDir: resolvePath('../react/src/'),
-        }),
-    ],
-    extras: {
-        enableImportInjection: true,
-    },
-    devServer: {
-        openBrowser: false,
-    },
-}
+	namespace: "uikit",
+	buildDist: true,
+	enableCache: true,
+	cacheDir: resolvePath("../../.stencil"),
+	globalStyle: resolvePath("./src/styles/index.scss"),
+	plugins: [sass({ outputStyle: "compressed" })],
+	outputTargets: [
+		reactOutputTarget({
+			outDir: resolvePath("../react/src/"),
+		}),
+		vueOutputTarget({
+			componentCorePackage: "@uifoundry/uikit",
+			proxiesFile: resolvePath("../vue/src/components.ts"),
+		}),
+		{ type: "dist", esmLoaderPath: resolvePath("loader") },
+		{
+			type: "dist-custom-elements",
+			customElementsExportBehavior: "auto-define-custom-elements",
+			externalRuntime: false,
+		},
+		{ type: "docs-readme" },
+		{ type: "docs-json", file: "docs/uikit.json" },
+		{
+			type: "www",
+			serviceWorker: false,
+			dir: "../../docs/src/public/demo/",
+		},
+	],
+	testing: {
+		browserHeadless: "shell",
+	},
+	devServer: {
+		openBrowser: false,
+	},
+};

@@ -3,6 +3,9 @@
 .npmrc
 
 # compiled output
+dist/
+loader/
+demo/
 packages/react/src/components.ts
 
 dist
@@ -26,11 +29,12 @@ testem.log
 .nx
 .npmrc
 .idea
+cache/
+.husky/
 
 # System Files
 .DS_Store
 Thumbs.db
 
 # Documentation
-docs/.vitepress/cache
-docs/.vitepress/dist
+docs/.nuxt

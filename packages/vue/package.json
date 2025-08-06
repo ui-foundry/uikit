@@ -1,0 +1,25 @@
+{
+	"name": "@uifoundry/uikit-vue",
+	"description": "Vue wrapper components for @uifoundry/uikit",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/types/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "pnpm tsc",
+		"tsc": "tsc -p . --outDir ./dist",
+		"watch": "pnpm tsc --watch"
+	},
+	"dependencies": {
+		"@stencil/vue-output-target": "0.10.8",
+		"vue": "^3.5.18"
+	},
+	"peerDependencies": {
+		"@uifoundry/uikit": "workspace:*"
+	}
+}

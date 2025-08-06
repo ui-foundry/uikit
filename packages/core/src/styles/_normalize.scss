@@ -1,0 +1,119 @@
+/***
+    The new CSS reset - version 1.11.3 + border/margin/padding reset
+    Source: https://github.com/elad2412/the-new-css-reset
+***/
+
+/* Remove all user-agent styles (except display) */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+	all: unset;
+	display: revert;
+}
+
+/* Preferred box-sizing */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0 solid transparent;
+	background: none;
+	font: inherit;
+	outline: none;
+}
+
+/* Prevent mobile Safari font resizing */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Restore pointer for interactive elements */
+a,
+button {
+	cursor: revert;
+}
+
+/* Remove list styles */
+ol,
+ul,
+menu,
+summary {
+	list-style: none;
+}
+
+/* Fix nested ordered list in Firefox */
+ol {
+	counter-reset: revert;
+}
+
+/* Make images responsive */
+img {
+	max-inline-size: 100%;
+	max-block-size: 100%;
+}
+
+/* Remove cell spacing in tables */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Allow text selection in Safari inputs */
+input,
+textarea {
+	-webkit-user-select: auto;
+}
+
+/* Reapply white-space for textarea */
+textarea {
+	white-space: revert;
+}
+
+/* Revert appearance of <meter> */
+meter {
+	-webkit-appearance: revert;
+	appearance: revert;
+}
+
+/* Preformatted text */
+:where(pre) {
+	all: revert;
+	box-sizing: border-box;
+}
+
+/* Reset placeholder text opacity */
+::placeholder {
+	color: unset;
+}
+
+/* Fix display of [hidden] attribute */
+:where([hidden]) {
+	display: none;
+}
+
+/* Fix contenteditable behavior */
+:where([contenteditable]:not([contenteditable="false"])) {
+	-moz-user-modify: read-write;
+	-webkit-user-modify: read-write;
+	overflow-wrap: break-word;
+	-webkit-line-break: after-white-space;
+	-webkit-user-select: auto;
+}
+
+/* Restore draggable */
+:where([draggable="true"]) {
+	-webkit-user-drag: element;
+}
+
+/* Restore dialog default behavior */
+:where(dialog:modal) {
+	all: revert;
+	box-sizing: border-box;
+}
+
+/* Hide details marker */
+::-webkit-details-marker {
+	display: none;
+}

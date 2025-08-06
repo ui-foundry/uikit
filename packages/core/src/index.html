@@ -1,0 +1,40 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+		<title>Component Starter</title>
+
+		<link rel="stylesheet" href="/build/uikit.css" />
+
+		<script>
+			// Automatically set data-color-scheme on <html> based on system theme
+			const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+			document.documentElement.setAttribute("data-color-scheme", systemTheme);
+
+			// Optional: Update on system change
+			window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+				const newTheme = e.matches ? "dark" : "light";
+				document.documentElement.setAttribute("data-color-scheme", newTheme);
+			});
+		</script>
+
+		<script type="module" src="/build/uikit.esm.js"></script>
+		<script nomodule src="/build/uikit.js"></script>
+	</head>
+	<body style="padding: 30px">
+		<ui-flex gap="8">
+			<ui-avatar initials="RA" radius="none" size="32"></ui-avatar>
+			<ui-avatar initials="RA" radius="sm" size="40"></ui-avatar>
+			<ui-avatar initials="RA" radius="md" size="48"></ui-avatar>
+			<ui-avatar initials="RA" radius="full" size="56"></ui-avatar>
+		</ui-flex>
+
+		<div class="ui-avatar-group">
+			<ui-avatar initials="RA" radius="full" size="36"></ui-avatar>
+			<ui-avatar initials="RA" radius="full" size="36"></ui-avatar>
+			<ui-avatar initials="RA" radius="full" size="36"></ui-avatar>
+			<ui-avatar initials="RA" radius="full" size="36"></ui-avatar>
+		</div>
+	</body>
+</html>
