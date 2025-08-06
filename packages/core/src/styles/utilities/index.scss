@@ -1,8 +1,8 @@
-@use 'sass:map';
+@use "sass:map";
 
-@use '../mixins' as *;
-@use './display' as *;
-@use './flex' as *;
+@use "../mixins" as *;
+@use "./display" as *;
+@use "./flex" as *;
 
 $utilities: map.merge($utilities-display, map.merge($utilities-flex, $utilities-flex-direction));
 

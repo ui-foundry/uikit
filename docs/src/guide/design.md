@@ -8,7 +8,7 @@ Our UIkit library is primarily based on the principles of [Atomic Design](https:
 
 These atoms are then composed into more complex, reusable structures known as _molecules_ and beyond, promoting scalability, consistency, and modularity throughout the design system.
 
-![Atomic Design](/images/atomic_design.png 'Atomic Design')
+![Atomic Design](/images/atomic_design.png "Atomic Design")
 
 1. Atoms include basic HTML elements like [icons](), [inputs](), [buttons](),...
 2. Molecules are simple groups of UI elements functioning together as a unit. Label, input and

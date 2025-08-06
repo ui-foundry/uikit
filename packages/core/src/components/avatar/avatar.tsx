@@ -1,17 +1,17 @@
-import { Component, h, Host, Prop, State } from '@stencil/core';
+import { Component, h, Host, Prop, State } from "@stencil/core";
 
 @Component({
-	tag: 'ui-avatar',
-	styleUrl: 'avatar.scss',
+	tag: "ui-avatar",
+	styleUrl: "avatar.scss",
 	shadow: false,
 })
 export class UiAvatar {
 	@State() hasError = false;
 
-	@Prop() image = '';
-	@Prop() alt = '';
-	@Prop() initials = '';
-	@Prop() radius: 'none' | 'sm' | 'md' | 'full' = 'md';
+	@Prop() image = "";
+	@Prop() alt = "";
+	@Prop() initials = "";
+	@Prop() radius: "none" | "sm" | "md" | "full" = "md";
 	@Prop() size: number = 32;
 
 	private handleImageError = () => {
@@ -20,8 +20,8 @@ export class UiAvatar {
 
 	private getStyle() {
 		return {
-			'--avatar-radius': this.radius === 'none' ? '0' : `var(--radius-${this.radius})`,
-			'--avatar-size': `${this.size}px`,
+			"--avatar-radius": this.radius === "none" ? "0" : `var(--radius-${this.radius})`,
+			"--avatar-size": `${this.size}px`,
 		};
 	}
 

@@ -1,5 +1,5 @@
-@import url('./reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
 	border-color: #36363b;
@@ -7,7 +7,7 @@
 
 html,
 body {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 16px;
 	color: #e8e8ec;
 	background-color: #1a1a1e;
@@ -81,7 +81,7 @@ body {
 	padding: 0.2em 0.4em;
 	font-size: 0.95em;
 	border-radius: 4px;
-	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .markdown pre {

@@ -1,9 +1,9 @@
-import type { Property } from 'csstype';
-import { Component, h, Host, Prop } from '@stencil/core';
+import type { Property } from "csstype";
+import { Component, h, Host, Prop } from "@stencil/core";
 
 @Component({
-	tag: 'ui-flex',
-	styleUrl: 'flex.scss',
+	tag: "ui-flex",
+	styleUrl: "flex.scss",
 	shadow: false,
 })
 export class UiFlex {

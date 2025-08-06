@@ -1,42 +1,42 @@
-import { Config } from '@stencil/core';
-import { resolve } from 'node:path';
-import { reactOutputTarget } from '@stencil/react-output-target';
-import { vueOutputTarget } from '@stencil/vue-output-target';
-import { sass } from '@stencil/sass';
+import { Config } from "@stencil/core";
+import { resolve } from "node:path";
+import { reactOutputTarget } from "@stencil/react-output-target";
+import { vueOutputTarget } from "@stencil/vue-output-target";
+import { sass } from "@stencil/sass";
 
-const resolvePath = (path: string) => resolve(__dirname, path).replace(/\\/g, '/');
+const resolvePath = (path: string) => resolve(__dirname, path).replace(/\\/g, "/");
 
 export const config: Config = {
-	namespace: 'uikit',
+	namespace: "uikit",
 	buildDist: true,
 	enableCache: true,
-	cacheDir: resolvePath('../../.stencil'),
-	globalStyle: resolvePath('./src/styles/index.scss'),
-	plugins: [sass({ outputStyle: 'compressed' })],
+	cacheDir: resolvePath("../../.stencil"),
+	globalStyle: resolvePath("./src/styles/index.scss"),
+	plugins: [sass({ outputStyle: "compressed" })],
 	outputTargets: [
 		reactOutputTarget({
-			outDir: resolvePath('../react/src/'),
+			outDir: resolvePath("../react/src/"),
 		}),
 		vueOutputTarget({
-			componentCorePackage: '@uifoundry/uikit',
-			proxiesFile: resolvePath('../vue/src/components.ts'),
+			componentCorePackage: "@uifoundry/uikit",
+			proxiesFile: resolvePath("../vue/src/components.ts"),
 		}),
-		{ type: 'dist', esmLoaderPath: resolvePath('loader') },
+		{ type: "dist", esmLoaderPath: resolvePath("loader") },
 		{
-			type: 'dist-custom-elements',
-			customElementsExportBehavior: 'auto-define-custom-elements',
+			type: "dist-custom-elements",
+			customElementsExportBehavior: "auto-define-custom-elements",
 			externalRuntime: false,
 		},
-		{ type: 'docs-readme' },
-		{ type: 'docs-json', file: 'docs/uikit.json' },
+		{ type: "docs-readme" },
+		{ type: "docs-json", file: "docs/uikit.json" },
 		{
-			type: 'www',
+			type: "www",
 			serviceWorker: false,
-			dir: '../../docs/public/demo/',
+			dir: "../../docs/public/demo/",
 		},
 	],
 	testing: {
-		browserHeadless: 'shell',
+		browserHeadless: "shell",
 	},
 	devServer: {
 		openBrowser: false,

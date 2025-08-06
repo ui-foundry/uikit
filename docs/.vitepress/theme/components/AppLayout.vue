@@ -1,5 +1,5 @@
 <script setup>
-import { useData, useRoute } from 'vitepress';
+import { useData, useRoute } from "vitepress";
 const { theme } = useData();
 const route = useRoute();
 </script>
