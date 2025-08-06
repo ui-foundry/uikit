@@ -13,10 +13,16 @@ const props = defineProps({
 				v-for="(menu, index) in props.menus"
 				:key="index"
 				:href="menu.link"
-				class="group py-1.5 flex space-x-2 items-center text-sm border-solid border-l-2 px-4 hover:border-gray-50/50 hover:bg-gray-50/10"
+				class="group py-1.5 flex space-x-2 items-center text-sm border-left px-4 hover:border-gray-50/50 hover:bg-gray-50/10"
 			>
 				<span>{{ menu.text }}</span>
 			</a>
 		</div>
 	</div>
 </template>
+
+<style>
+.border-left {
+	border-left: 2px solid var(--border);
+}
+</style>

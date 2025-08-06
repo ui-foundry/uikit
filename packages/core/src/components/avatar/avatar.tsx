@@ -11,7 +11,7 @@ export class UiAvatar {
 	@Prop() image = "";
 	@Prop() alt = "";
 	@Prop() initials = "";
-	@Prop() radius: "none" | "sm" | "md" | "full" = "md";
+	@Prop() radius: "none" | "xs" | "sm" | "md" | "full" = "md";
 	@Prop() size: number = 32;
 
 	private handleImageError = () => {
@@ -28,7 +28,7 @@ export class UiAvatar {
 	render() {
 		return (
 			<Host class="ui-avatar" style={this.getStyle()}>
-				<span class="ui-avatar__placeholder">{this.initials}</span>
+				{this.initials && !this.image && <span class="ui-avatar__placeholder">{this.initials}</span>}
 				{this.image && !this.hasError && <img class="ui-avatar__image" src={this.image} alt={this.alt} onError={this.handleImageError} />}
 			</Host>
 		);

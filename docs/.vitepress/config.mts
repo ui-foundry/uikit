@@ -6,6 +6,11 @@ export default defineConfig({
 	title: "UiKit",
 	description: "A VitePress Site",
 	srcDir: "./src",
+	head: [
+		["script", { type: "module", src: "/demo/build/uikit.esm.js" }],
+		["script", { nomodule: "true", src: "/demo/build/uikit.js" }],
+		["link", { rel: "stylesheet", href: "/demo/build/uikit.css" }],
+	],
 	themeConfig: {
 		sidebar,
 	},

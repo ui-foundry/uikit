@@ -1,4 +1,9 @@
 :root[data-color-scheme="dark"] {
 	--background: oklch(0.26 0 0);
 	--foreground: oklch(0.84 0 0);
+
+	--primary: oklch(92.2% 0 0);
+	--primary-foreground: oklch(20.5% 0 0);
+
+	--border: oklch(100% 0 0/0.1);
 }

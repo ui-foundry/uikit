@@ -24,7 +24,7 @@ export namespace Components {
         /**
           * @default "md"
          */
-        "radius": "none" | "sm" | "md" | "full";
+        "radius": "none" | "xs" | "sm" | "md" | "full";
         /**
           * @default 32
          */
@@ -69,7 +69,7 @@ declare namespace LocalJSX {
         /**
           * @default "md"
          */
-        "radius"?: "none" | "sm" | "md" | "full";
+        "radius"?: "none" | "xs" | "sm" | "md" | "full";
         /**
           * @default 32
          */

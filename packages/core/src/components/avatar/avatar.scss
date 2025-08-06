@@ -11,7 +11,8 @@
 	position: relative;
 	width: var(--avatar-size);
 	height: var(--avatar-size);
-	background: #999;
+	background: var(--primary);
+	color: var(--primary-foreground);
 	border-radius: var(--avatar-radius);
 	overflow: hidden;
 	user-select: none;
@@ -32,7 +33,7 @@
 	}
 }
 .ui-avatar-group {
-	--ag-offset: calc(var(--spacing) * -3.5);
+	--ag-offset: calc(var(--spacing) * -3);
 	display: flex;
 }
 
@@ -41,5 +42,5 @@
 }
 
 .ui-avatar-group .ui-avatar {
-	border: 2px solid #1a1a1e;
+	border: 2px solid var(--border);
 }

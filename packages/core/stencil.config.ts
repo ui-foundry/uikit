@@ -32,7 +32,7 @@ export const config: Config = {
 		{
 			type: "www",
 			serviceWorker: false,
-			dir: "../../docs/public/demo/",
+			dir: "../../docs/src/public/demo/",
 		},
 	],
 	testing: {
