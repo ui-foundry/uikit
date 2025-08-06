@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 
-const setTheme = mode => {
+const setTheme = (mode) => {
 	document.documentElement.setAttribute("data-color-scheme", mode);
 	localStorage.setItem("color-scheme", mode);
 };
@@ -26,7 +26,7 @@ onMounted(() => {
 
 	// Optional: Update when system preference changes (only if no manual override)
 	if (!localStorage.getItem("color-scheme")) {
-		window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+		window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
 			const systemTheme = e.matches ? "dark" : "light";
 			setTheme(systemTheme);
 		});
