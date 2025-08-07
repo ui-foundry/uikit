@@ -3,7 +3,7 @@ title: Avatar
 description: Avatar component documentation
 ---
 
-# Avatar <span class="text-size-3.5">`<uk-avatar/>`</span>
+# Avatar <span class="text-size-3.5">`<ui-avatar/>`</span>
 
 An Avatar container to show user photo or initials.
 
