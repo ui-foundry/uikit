@@ -1,5 +1,5 @@
+import { Component, Host, h, Prop } from "@stencil/core";
 import type { Property } from "csstype";
-import { Component, h, Host, Prop } from "@stencil/core";
 
 @Component({
 	tag: "ui-flex",
@@ -7,11 +7,19 @@ import { Component, h, Host, Prop } from "@stencil/core";
 	shadow: false,
 })
 export class UiFlex {
-	@Prop() gap?: Property.Gap<number>;
+	@Prop() gap?: number;
+	@Prop() direction: Property.FlexDirection = "row";
+	@Prop() wrap: Property.FlexWrap = "wrap";
+	@Prop() align: Property.AlignItems = "flex-start";
+	@Prop() justify: Property.JustifyContent = "flex-start";
 
 	private styles() {
 		return {
 			...(this.gap && { gap: `${this.gap}px` }),
+			...(this.direction && { "flex-direction": this.direction }),
+			...(this.wrap && { "flex-wrap": this.wrap }),
+			...(this.align && { "align-items": this.align }),
+			...(this.justify && { "justify-content": this.justify }),
 		};
 	}
 
