@@ -31,7 +31,29 @@ export namespace Components {
         "size": number;
     }
     interface UiFlex {
-        "gap"?: Property.Gap<number>;
+        /**
+          * @default "flex-start"
+         */
+        "align": Property.AlignItems;
+        /**
+          * @default "row"
+         */
+        "direction": Property.FlexDirection;
+        "gap"?: number;
+        /**
+          * @default "flex-start"
+         */
+        "justify": Property.JustifyContent;
+        /**
+          * @default "wrap"
+         */
+        "wrap": Property.FlexWrap;
+    }
+    interface UiSpinner {
+        /**
+          * @default 60
+         */
+        "size": number;
     }
 }
 declare global {
@@ -47,9 +69,16 @@ declare global {
         prototype: HTMLUiFlexElement;
         new (): HTMLUiFlexElement;
     };
+    interface HTMLUiSpinnerElement extends Components.UiSpinner, HTMLStencilElement {
+    }
+    var HTMLUiSpinnerElement: {
+        prototype: HTMLUiSpinnerElement;
+        new (): HTMLUiSpinnerElement;
+    };
     interface HTMLElementTagNameMap {
         "ui-avatar": HTMLUiAvatarElement;
         "ui-flex": HTMLUiFlexElement;
+        "ui-spinner": HTMLUiSpinnerElement;
     }
 }
 declare namespace LocalJSX {
@@ -76,11 +105,34 @@ declare namespace LocalJSX {
         "size"?: number;
     }
     interface UiFlex {
-        "gap"?: Property.Gap<number>;
+        /**
+          * @default "flex-start"
+         */
+        "align"?: Property.AlignItems;
+        /**
+          * @default "row"
+         */
+        "direction"?: Property.FlexDirection;
+        "gap"?: number;
+        /**
+          * @default "flex-start"
+         */
+        "justify"?: Property.JustifyContent;
+        /**
+          * @default "wrap"
+         */
+        "wrap"?: Property.FlexWrap;
+    }
+    interface UiSpinner {
+        /**
+          * @default 60
+         */
+        "size"?: number;
     }
     interface IntrinsicElements {
         "ui-avatar": UiAvatar;
         "ui-flex": UiFlex;
+        "ui-spinner": UiSpinner;
     }
 }
 export { LocalJSX as JSX };
@@ -89,6 +141,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "ui-avatar": LocalJSX.UiAvatar & JSXBase.HTMLAttributes<HTMLUiAvatarElement>;
             "ui-flex": LocalJSX.UiFlex & JSXBase.HTMLAttributes<HTMLUiFlexElement>;
+            "ui-spinner": LocalJSX.UiSpinner & JSXBase.HTMLAttributes<HTMLUiSpinnerElement>;
         }
     }
 }
