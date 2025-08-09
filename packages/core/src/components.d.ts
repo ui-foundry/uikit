@@ -8,6 +8,9 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Property } from "csstype";
 export { Property } from "csstype";
 export namespace Components {
+    interface UiAlert {
+        "heading"?: string;
+    }
     interface UiAvatar {
         /**
           * @default ""
@@ -57,6 +60,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLUiAlertElement extends Components.UiAlert, HTMLStencilElement {
+    }
+    var HTMLUiAlertElement: {
+        prototype: HTMLUiAlertElement;
+        new (): HTMLUiAlertElement;
+    };
     interface HTMLUiAvatarElement extends Components.UiAvatar, HTMLStencilElement {
     }
     var HTMLUiAvatarElement: {
@@ -76,12 +85,16 @@ declare global {
         new (): HTMLUiSpinnerElement;
     };
     interface HTMLElementTagNameMap {
+        "ui-alert": HTMLUiAlertElement;
         "ui-avatar": HTMLUiAvatarElement;
         "ui-flex": HTMLUiFlexElement;
         "ui-spinner": HTMLUiSpinnerElement;
     }
 }
 declare namespace LocalJSX {
+    interface UiAlert {
+        "heading"?: string;
+    }
     interface UiAvatar {
         /**
           * @default ""
@@ -130,6 +143,7 @@ declare namespace LocalJSX {
         "size"?: number;
     }
     interface IntrinsicElements {
+        "ui-alert": UiAlert;
         "ui-avatar": UiAvatar;
         "ui-flex": UiFlex;
         "ui-spinner": UiSpinner;
@@ -139,6 +153,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ui-alert": LocalJSX.UiAlert & JSXBase.HTMLAttributes<HTMLUiAlertElement>;
             "ui-avatar": LocalJSX.UiAvatar & JSXBase.HTMLAttributes<HTMLUiAvatarElement>;
             "ui-flex": LocalJSX.UiFlex & JSXBase.HTMLAttributes<HTMLUiFlexElement>;
             "ui-spinner": LocalJSX.UiSpinner & JSXBase.HTMLAttributes<HTMLUiSpinnerElement>;
