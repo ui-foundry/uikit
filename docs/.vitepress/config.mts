@@ -16,10 +16,14 @@ export default defineConfig({
 		["script", { nomodule: "true", src: "/uikit/demo/build/uikit.js" }],
 		["link", { rel: "stylesheet", href: "/uikit/demo/build/uikit.css" }],
 	],
-	themeConfig: {
-		sidebar,
+	vue: {
+		template: {
+			compilerOptions: {
+				// Treat all `ui-*` tags as custom elements
+				isCustomElement: (tag) => tag.startsWith("ui-"),
+			},
+		},
 	},
-	vite: {
-		plugins: [UnoCSS()],
-	},
+	themeConfig: { sidebar },
+	vite: { plugins: [UnoCSS()] },
 });
