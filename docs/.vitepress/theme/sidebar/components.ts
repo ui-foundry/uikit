@@ -6,6 +6,7 @@ export const SideBarComponents: DefaultTheme.SidebarItem[] = [
 		items: [
 			{ text: "Alert", link: "/uikit/components/alert" },
 			{ text: "Avatar", link: "/uikit/components/avatar" },
+			{ text: "Icon", link: "/uikit/components/icon" },
 			{ text: "Spinner", link: "/uikit/components/spinner" },
 		],
 	},
