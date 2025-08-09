@@ -1,4 +1,4 @@
-import { r as registerInstance, h, a as Host } from './index-D00rk4ze.js';
+import { r as registerInstance, h, d as Host } from './index-Bh24I87Q.js';
 
 const spinnerCss = ":host,ui-spinner{--track-color:rgb(128 128 128 / 25%);--indicator-color:#27bafd;--stroke-width:4px}.ui-spinner{display:inline-block;border-radius:var(--radius-full, 50%);width:var(--spinner-size);height:var(--spinner-size);border:solid var(--stroke-width) var(--track-color);border-top-color:var(--indicator-color);border-right-color:var(--indicator-color);animation:1s linear infinite spin}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}";
 
@@ -13,7 +13,7 @@ const UiSpinner = class {
         };
     }
     render() {
-        return h(Host, { key: '90821a1f057301db68d51a9c402339a462dfe110', class: "ui-spinner", style: this.getStyle() });
+        return h(Host, { key: 'faa5edc5992663c9eb6cc07eb9460cd5a3af4ab4', class: "ui-spinner", style: this.getStyle() });
     }
 };
 UiSpinner.style = spinnerCss;
