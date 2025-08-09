@@ -4,7 +4,7 @@ pre-commit:
     "checking format & linting":
       glob: "*.{js,ts,cjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       run: |
-        bunx biome check {staged_files} --write
+        pnpm biome check {staged_files} --write
       stage_fixed: true
       skip:
         - merge
@@ -14,10 +14,10 @@ post-merge:
   commands:
     pnpm:
       glob: "{package.json,pnpm-lock.yaml}"
-      run: bun install
+      run: pnpm install
 
 commit-msg:
   commands:
     commitlint:
       run: |
-        bunx commitlint --edit {1}
+        pnpm commitlint --edit {1}

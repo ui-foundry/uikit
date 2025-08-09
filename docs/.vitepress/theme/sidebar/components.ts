@@ -1,13 +1,13 @@
-import { DefaultTheme } from "vitepress";
+import type { DefaultTheme } from "vitepress";
 
 export const SideBarComponents: DefaultTheme.SidebarItem[] = [
 	{
 		text: "Components",
 		items: [
-			{ text: "Avatar", link: "/components/avatar" },
-			{ text: "Badge", link: "/components/badge" },
-			{ text: "Button", link: "/components/button" },
-			{ text: "Card", link: "/components/card" },
+			{ text: "Alert", link: "/uikit/components/alert" },
+			{ text: "Avatar", link: "/uikit/components/avatar" },
+			{ text: "Icon", link: "/uikit/components/icon" },
+			{ text: "Spinner", link: "/uikit/components/spinner" },
 		],
 	},
 ];

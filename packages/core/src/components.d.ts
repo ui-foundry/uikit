@@ -8,6 +8,9 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Property } from "csstype";
 export { Property } from "csstype";
 export namespace Components {
+    interface UiAlert {
+        "heading"?: string;
+    }
     interface UiAvatar {
         /**
           * @default ""
@@ -31,10 +34,58 @@ export namespace Components {
         "size": number;
     }
     interface UiFlex {
-        "gap"?: Property.Gap<number>;
+        /**
+          * @default "flex-start"
+         */
+        "align": Property.AlignItems;
+        /**
+          * @default "row"
+         */
+        "direction": Property.FlexDirection;
+        "gap"?: number;
+        /**
+          * @default "flex-start"
+         */
+        "justify": Property.JustifyContent;
+        /**
+          * @default "wrap"
+         */
+        "wrap": Property.FlexWrap;
+    }
+    interface UiIcon {
+        "color"?: string;
+        /**
+          * @default false
+         */
+        "filled": boolean;
+        /**
+          * @default ""
+         */
+        "label"?: string;
+        /**
+          * @default 24
+         */
+        "size": number;
+        "src"?: string;
+        /**
+          * @default "fill"
+         */
+        "variant": "fill" | "stroke";
+    }
+    interface UiSpinner {
+        /**
+          * @default 60
+         */
+        "size": number;
     }
 }
 declare global {
+    interface HTMLUiAlertElement extends Components.UiAlert, HTMLStencilElement {
+    }
+    var HTMLUiAlertElement: {
+        prototype: HTMLUiAlertElement;
+        new (): HTMLUiAlertElement;
+    };
     interface HTMLUiAvatarElement extends Components.UiAvatar, HTMLStencilElement {
     }
     var HTMLUiAvatarElement: {
@@ -47,12 +98,30 @@ declare global {
         prototype: HTMLUiFlexElement;
         new (): HTMLUiFlexElement;
     };
+    interface HTMLUiIconElement extends Components.UiIcon, HTMLStencilElement {
+    }
+    var HTMLUiIconElement: {
+        prototype: HTMLUiIconElement;
+        new (): HTMLUiIconElement;
+    };
+    interface HTMLUiSpinnerElement extends Components.UiSpinner, HTMLStencilElement {
+    }
+    var HTMLUiSpinnerElement: {
+        prototype: HTMLUiSpinnerElement;
+        new (): HTMLUiSpinnerElement;
+    };
     interface HTMLElementTagNameMap {
+        "ui-alert": HTMLUiAlertElement;
         "ui-avatar": HTMLUiAvatarElement;
         "ui-flex": HTMLUiFlexElement;
+        "ui-icon": HTMLUiIconElement;
+        "ui-spinner": HTMLUiSpinnerElement;
     }
 }
 declare namespace LocalJSX {
+    interface UiAlert {
+        "heading"?: string;
+    }
     interface UiAvatar {
         /**
           * @default ""
@@ -76,19 +145,67 @@ declare namespace LocalJSX {
         "size"?: number;
     }
     interface UiFlex {
-        "gap"?: Property.Gap<number>;
+        /**
+          * @default "flex-start"
+         */
+        "align"?: Property.AlignItems;
+        /**
+          * @default "row"
+         */
+        "direction"?: Property.FlexDirection;
+        "gap"?: number;
+        /**
+          * @default "flex-start"
+         */
+        "justify"?: Property.JustifyContent;
+        /**
+          * @default "wrap"
+         */
+        "wrap"?: Property.FlexWrap;
+    }
+    interface UiIcon {
+        "color"?: string;
+        /**
+          * @default false
+         */
+        "filled"?: boolean;
+        /**
+          * @default ""
+         */
+        "label"?: string;
+        /**
+          * @default 24
+         */
+        "size"?: number;
+        "src"?: string;
+        /**
+          * @default "fill"
+         */
+        "variant"?: "fill" | "stroke";
+    }
+    interface UiSpinner {
+        /**
+          * @default 60
+         */
+        "size"?: number;
     }
     interface IntrinsicElements {
+        "ui-alert": UiAlert;
         "ui-avatar": UiAvatar;
         "ui-flex": UiFlex;
+        "ui-icon": UiIcon;
+        "ui-spinner": UiSpinner;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ui-alert": LocalJSX.UiAlert & JSXBase.HTMLAttributes<HTMLUiAlertElement>;
             "ui-avatar": LocalJSX.UiAvatar & JSXBase.HTMLAttributes<HTMLUiAvatarElement>;
             "ui-flex": LocalJSX.UiFlex & JSXBase.HTMLAttributes<HTMLUiFlexElement>;
+            "ui-icon": LocalJSX.UiIcon & JSXBase.HTMLAttributes<HTMLUiIconElement>;
+            "ui-spinner": LocalJSX.UiSpinner & JSXBase.HTMLAttributes<HTMLUiSpinnerElement>;
         }
     }
 }

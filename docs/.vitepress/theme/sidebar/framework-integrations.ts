@@ -1,14 +1,14 @@
-import { DefaultTheme } from "vitepress";
+import type { DefaultTheme } from "vitepress";
 
 export const SideBarFrameworkIntegrations: DefaultTheme.SidebarItem[] = [
 	{
 		text: "Framework Integrations",
 		items: [
-			{ text: "JavaScript", link: "/frameworks/javascript" },
-			{ text: "React", link: "/frameworks/react" },
-			{ text: "Vue", link: "/frameworks/vue" },
-			{ text: "Angular", link: "/frameworks/angular" },
-			{ text: "Svelte", link: "/frameworks/svelte" },
+			{ text: "JavaScript", link: "/uikit/frameworks/javascript" },
+			{ text: "React", link: "/uikit/frameworks/react" },
+			{ text: "Vue", link: "/uikit/frameworks/vue" },
+			{ text: "Angular", link: "/uikit/frameworks/angular" },
+			{ text: "Svelte", link: "/uikit/frameworks/svelte" },
 		],
 	},
 ];

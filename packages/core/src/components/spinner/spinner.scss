@@ -1,0 +1,26 @@
+:host,
+ui-spinner {
+    --track-color: rgb(128 128 128 / 25%);
+    --indicator-color: #27bafd;
+    --stroke-width: 4px;
+}
+
+.ui-spinner {
+    display: inline-block;
+    border-radius: var(--radius-full, 50%);
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    border: solid var(--stroke-width) var(--track-color);
+    border-top-color: var(--indicator-color);
+    border-right-color: var(--indicator-color);
+    animation: 1s linear infinite spin;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

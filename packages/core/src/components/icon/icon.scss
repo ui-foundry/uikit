@@ -1,0 +1,15 @@
+ui-icon {
+    --icon-color: var(--foreground);
+
+    display: inline-block;
+    line-height: 0;
+    vertical-align: middle;
+    height: var(--icon-size);
+    width: var(--icon-size);
+    color: var(--icon-color);
+
+    & > svg {
+        width: var(--icon-size);
+        height: var(--icon-size);
+    }
+}
