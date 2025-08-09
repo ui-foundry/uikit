@@ -11,4 +11,6 @@ export const UiAvatar: StencilVueComponent<JSX.UiAvatar> = /*@__PURE__*/ defineC
 
 export const UiFlex: StencilVueComponent<JSX.UiFlex> = /*@__PURE__*/ defineContainer<JSX.UiFlex>("ui-flex", undefined, ["gap", "direction", "wrap", "align", "justify"]);
 
+export const UiIcon: StencilVueComponent<JSX.UiIcon> = /*@__PURE__*/ defineContainer<JSX.UiIcon>("ui-icon", undefined, ["filled", "size", "label", "color", "src", "variant"]);
+
 export const UiSpinner: StencilVueComponent<JSX.UiSpinner> = /*@__PURE__*/ defineContainer<JSX.UiSpinner>("ui-spinner", undefined, ["size"]);

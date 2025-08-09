@@ -52,6 +52,26 @@ export namespace Components {
          */
         "wrap": Property.FlexWrap;
     }
+    interface UiIcon {
+        "color"?: string;
+        /**
+          * @default false
+         */
+        "filled": boolean;
+        /**
+          * @default ""
+         */
+        "label"?: string;
+        /**
+          * @default 24
+         */
+        "size": number;
+        "src"?: string;
+        /**
+          * @default "fill"
+         */
+        "variant": "fill" | "stroke";
+    }
     interface UiSpinner {
         /**
           * @default 60
@@ -78,6 +98,12 @@ declare global {
         prototype: HTMLUiFlexElement;
         new (): HTMLUiFlexElement;
     };
+    interface HTMLUiIconElement extends Components.UiIcon, HTMLStencilElement {
+    }
+    var HTMLUiIconElement: {
+        prototype: HTMLUiIconElement;
+        new (): HTMLUiIconElement;
+    };
     interface HTMLUiSpinnerElement extends Components.UiSpinner, HTMLStencilElement {
     }
     var HTMLUiSpinnerElement: {
@@ -88,6 +114,7 @@ declare global {
         "ui-alert": HTMLUiAlertElement;
         "ui-avatar": HTMLUiAvatarElement;
         "ui-flex": HTMLUiFlexElement;
+        "ui-icon": HTMLUiIconElement;
         "ui-spinner": HTMLUiSpinnerElement;
     }
 }
@@ -136,6 +163,26 @@ declare namespace LocalJSX {
          */
         "wrap"?: Property.FlexWrap;
     }
+    interface UiIcon {
+        "color"?: string;
+        /**
+          * @default false
+         */
+        "filled"?: boolean;
+        /**
+          * @default ""
+         */
+        "label"?: string;
+        /**
+          * @default 24
+         */
+        "size"?: number;
+        "src"?: string;
+        /**
+          * @default "fill"
+         */
+        "variant"?: "fill" | "stroke";
+    }
     interface UiSpinner {
         /**
           * @default 60
@@ -146,6 +193,7 @@ declare namespace LocalJSX {
         "ui-alert": UiAlert;
         "ui-avatar": UiAvatar;
         "ui-flex": UiFlex;
+        "ui-icon": UiIcon;
         "ui-spinner": UiSpinner;
     }
 }
@@ -156,6 +204,7 @@ declare module "@stencil/core" {
             "ui-alert": LocalJSX.UiAlert & JSXBase.HTMLAttributes<HTMLUiAlertElement>;
             "ui-avatar": LocalJSX.UiAvatar & JSXBase.HTMLAttributes<HTMLUiAvatarElement>;
             "ui-flex": LocalJSX.UiFlex & JSXBase.HTMLAttributes<HTMLUiFlexElement>;
+            "ui-icon": LocalJSX.UiIcon & JSXBase.HTMLAttributes<HTMLUiIconElement>;
             "ui-spinner": LocalJSX.UiSpinner & JSXBase.HTMLAttributes<HTMLUiSpinnerElement>;
         }
     }
