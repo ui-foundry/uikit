@@ -1,0 +1,14 @@
+ui-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 1.3;
+    padding-inline: 8px;
+    padding-block: 2px;
+    border-radius: var(--badge-radius);
+    background: var(--primary);
+    color: var(--primary-foreground);
+    width: var(--badge-size);
+    height: var(--badge-size);
+}

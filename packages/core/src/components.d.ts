@@ -33,6 +33,20 @@ export namespace Components {
          */
         "size": number;
     }
+    interface UiBadge {
+        /**
+          * @default false
+         */
+        "circle": boolean;
+        /**
+          * @default "pill"
+         */
+        "radius": "xs" | "sm" | "md" | "pill";
+        /**
+          * @default "fit-content"
+         */
+        "size": string;
+    }
     interface UiFlex {
         /**
           * @default "flex-start"
@@ -92,6 +106,12 @@ declare global {
         prototype: HTMLUiAvatarElement;
         new (): HTMLUiAvatarElement;
     };
+    interface HTMLUiBadgeElement extends Components.UiBadge, HTMLStencilElement {
+    }
+    var HTMLUiBadgeElement: {
+        prototype: HTMLUiBadgeElement;
+        new (): HTMLUiBadgeElement;
+    };
     interface HTMLUiFlexElement extends Components.UiFlex, HTMLStencilElement {
     }
     var HTMLUiFlexElement: {
@@ -113,6 +133,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "ui-alert": HTMLUiAlertElement;
         "ui-avatar": HTMLUiAvatarElement;
+        "ui-badge": HTMLUiBadgeElement;
         "ui-flex": HTMLUiFlexElement;
         "ui-icon": HTMLUiIconElement;
         "ui-spinner": HTMLUiSpinnerElement;
@@ -143,6 +164,20 @@ declare namespace LocalJSX {
           * @default 32
          */
         "size"?: number;
+    }
+    interface UiBadge {
+        /**
+          * @default false
+         */
+        "circle"?: boolean;
+        /**
+          * @default "pill"
+         */
+        "radius"?: "xs" | "sm" | "md" | "pill";
+        /**
+          * @default "fit-content"
+         */
+        "size"?: string;
     }
     interface UiFlex {
         /**
@@ -192,6 +227,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "ui-alert": UiAlert;
         "ui-avatar": UiAvatar;
+        "ui-badge": UiBadge;
         "ui-flex": UiFlex;
         "ui-icon": UiIcon;
         "ui-spinner": UiSpinner;
@@ -203,6 +239,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "ui-alert": LocalJSX.UiAlert & JSXBase.HTMLAttributes<HTMLUiAlertElement>;
             "ui-avatar": LocalJSX.UiAvatar & JSXBase.HTMLAttributes<HTMLUiAvatarElement>;
+            "ui-badge": LocalJSX.UiBadge & JSXBase.HTMLAttributes<HTMLUiBadgeElement>;
             "ui-flex": LocalJSX.UiFlex & JSXBase.HTMLAttributes<HTMLUiFlexElement>;
             "ui-icon": LocalJSX.UiIcon & JSXBase.HTMLAttributes<HTMLUiIconElement>;
             "ui-spinner": LocalJSX.UiSpinner & JSXBase.HTMLAttributes<HTMLUiSpinnerElement>;
