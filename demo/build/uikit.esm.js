@@ -43,7 +43,7 @@ var patchCloneNodeFix = (HTMLElementPrototype) => {
 
 patchBrowser().then(async (options) => {
   await globalScripts();
-  return bootstrapLazy([["ui-alert",[[260,"ui-alert",{"heading":[1],"hasIcon":[32]}]]],["ui-avatar",[[256,"ui-avatar",{"image":[1],"alt":[1],"initials":[1],"radius":[1],"size":[2],"hasError":[32]}]]],["ui-flex",[[260,"ui-flex",{"gap":[2],"direction":[1],"wrap":[1],"align":[1],"justify":[1]}]]],["ui-icon",[[260,"ui-icon",{"filled":[4],"size":[2],"label":[1],"color":[1],"src":[1],"variant":[1],"svgContent":[32]},null,{"src":["onSrcChange"]}]]],["ui-spinner",[[256,"ui-spinner",{"size":[2]}]]]], options);
+  return bootstrapLazy([["ui-alert",[[260,"ui-alert",{"heading":[1],"hasIcon":[32]}]]],["ui-avatar",[[256,"ui-avatar",{"image":[1],"alt":[1],"initials":[1],"radius":[1],"size":[2],"hasError":[32]}]]],["ui-badge",[[260,"ui-badge",{"circle":[4],"size":[1],"radius":[1]}]]],["ui-flex",[[260,"ui-flex",{"gap":[2],"direction":[1],"wrap":[1],"align":[1],"justify":[1]}]]],["ui-icon",[[260,"ui-icon",{"filled":[4],"size":[2],"label":[1],"color":[1],"src":[1],"variant":[1],"svgContent":[32]},null,{"src":["onSrcChange"]}]]],["ui-spinner",[[256,"ui-spinner",{"size":[2]}]]]], options);
 });
 //# sourceMappingURL=uikit.esm.js.map
 

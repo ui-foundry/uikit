@@ -21,7 +21,7 @@ const UiFlex = class {
         };
     }
     render() {
-        return (h(Host, { key: 'c640253585b24d062fdfa74f4995ae2e53c3fe73', class: "ui-d-flex", style: this.styles() }, h("slot", { key: '27f67e96115eb807baca8cc01c4baa0e6b77e4a4' })));
+        return (h(Host, { key: '442f63da47404bccbddbfcd326b700fa3a57261e', class: "ui-d-flex", style: this.styles() }, h("slot", { key: 'e4f44927fc8ad4b61f0260b0d651d8af7d3bf869' })));
     }
 };
 UiFlex.style = flexCss;

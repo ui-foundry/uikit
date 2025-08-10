@@ -22,7 +22,7 @@ const UiAvatar = class {
         };
     }
     render() {
-        return (h(Host, { key: '25584365fe0f1901a826af752ec6d287bdc0b9e3', class: "ui-avatar", style: this.getStyle() }, this.initials && !this.image && h("span", { key: '829d673d8e76ccea92b9184e28522c7ccb930025', class: "ui-avatar__placeholder" }, this.initials), this.image && !this.hasError && h("img", { key: '88325e4c8cc0ceb8ec84a244452fb7092c564161', class: "ui-avatar__image", src: this.image, alt: this.alt, onError: this.handleImageError })));
+        return (h(Host, { key: 'bc1ef2c575af5896d78aa69a18763665ae225f7b', class: "ui-avatar", style: this.getStyle() }, this.initials && !this.image && h("span", { key: '403a188ad275c8272feeba28babca615a0b50b10', class: "ui-avatar__placeholder" }, this.initials), this.image && !this.hasError && h("img", { key: 'd3c1ab9f90ca38ce39e0d7cfd4fea5e0cd58ac04', class: "ui-avatar__image", src: this.image, alt: this.alt, onError: this.handleImageError })));
     }
 };
 UiAvatar.style = avatarCss;

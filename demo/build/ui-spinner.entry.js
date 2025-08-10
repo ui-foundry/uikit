@@ -13,7 +13,7 @@ const UiSpinner = class {
         };
     }
     render() {
-        return h(Host, { key: 'faa5edc5992663c9eb6cc07eb9460cd5a3af4ab4', class: "ui-spinner", style: this.getStyle() });
+        return h(Host, { key: 'b2eda2979b97d0735f967e50f10f7cf2753b3587', class: "ui-spinner", style: this.getStyle() });
     }
 };
 UiSpinner.style = spinnerCss;

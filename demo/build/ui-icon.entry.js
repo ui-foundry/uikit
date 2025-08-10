@@ -53,7 +53,7 @@ const UiIcon = class {
     }
     render() {
         const hasSlottedSvg = this.el.querySelector("svg") !== null;
-        return (h(Host, { key: 'dbaceeb0b7a48606f5eb26b4b876e51762622e71', class: "ui-icon", role: "img", "aria-hidden": this.label ? "false" : "true", style: this.getStyle(), innerHTML: !hasSlottedSvg && this.svgContent ? this.svgContent : undefined }, this.label ? h("span", { class: "sr-only" }, this.label) : null, hasSlottedSvg && h("slot", { key: '82d1eef382bc8dfede24dcadafbbee18252cbb4f' })));
+        return (h(Host, { key: '6556007cb3432ee9d3241c43a71c27ed549d1806', class: "ui-icon", role: "img", "aria-hidden": this.label ? "false" : "true", style: this.getStyle(), innerHTML: !hasSlottedSvg && this.svgContent ? this.svgContent : undefined }, this.label ? h("span", { class: "sr-only" }, this.label) : null, hasSlottedSvg && h("slot", { key: '64a9473d7acc17acb0453c54d27cff9eea362ffc' })));
     }
     static get watchers() { return {
         "src": ["onSrcChange"]
