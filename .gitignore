@@ -10,7 +10,6 @@ demo/
 dist
 tmp
 /out-tsc
-.stencil
 
 # dependencies
 node_modules
@@ -37,3 +36,8 @@ Thumbs.db
 
 # Documentation
 docs/.nuxt
+
+# source files to ignore
+.stencil
+packages/react/src/components.ts
+packages/vue/src/components.ts
