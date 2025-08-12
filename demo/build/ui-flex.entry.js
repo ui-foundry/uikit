@@ -1,4 +1,4 @@
-import { r as registerInstance, h, d as Host } from './index-Bh24I87Q.js';
+import { r as registerInstance, h, d as Host } from './index-Xd35V0a6.js';
 
 const flexCss = "";
 
@@ -21,7 +21,7 @@ const UiFlex = class {
         };
     }
     render() {
-        return (h(Host, { key: '442f63da47404bccbddbfcd326b700fa3a57261e', class: "ui-d-flex", style: this.styles() }, h("slot", { key: 'e4f44927fc8ad4b61f0260b0d651d8af7d3bf869' })));
+        return (h(Host, { key: '67fb4c5808825edd5fd9ec7c988425c7e415c1fd', class: "ui-d-flex", style: this.styles() }, h("slot", { key: 'bf1d9c9f3f7792a68666554c2aeb6057e9e6bb5a' })));
     }
 };
 UiFlex.style = flexCss;

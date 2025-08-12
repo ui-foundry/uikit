@@ -1,4 +1,4 @@
-import { r as registerInstance, a as getElement, h, d as Host } from './index-Bh24I87Q.js';
+import { r as registerInstance, a as getElement, h, d as Host } from './index-Xd35V0a6.js';
 
 function hasSlot(el, slotName) {
     return !!el.querySelector(`[slot="${slotName}"]`);
@@ -17,7 +17,7 @@ const UiAlert = class {
         this.hasIcon = hasSlot(this.el, "icon");
     }
     render() {
-        return (h(Host, { key: '827513ff1603e657879d2531d8452bf2c023fdec', class: "ui-alert", role: "alert" }, h("div", { key: 'c7d44cdccd4da55df024a2cf34b2d7dd87c2bd87', class: "ui-alert__icon" }, h("svg", { key: '93b97faa32ff515d815edefece433b41ccc5a369', focusable: "false", "aria-hidden": "true", viewBox: "0 0 24 24" }, h("path", { key: '623f444fc8df8b73e0c886892342bab4f3fe4b02', d: "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" }))), h("div", { key: '43f6973d8cae871c3b8a95369f2792a33410dcc9', class: "ui-alert__content" }, this.heading && h("div", { key: '5698b2ccac51043c4a37a167cfe7a84665547e5d', class: "ui-alert__content-heading" }, this.heading), h("slot", { key: '8835aefab605b56987d2df3c933ef54fd74d8fe9' })), h("div", { key: '48c6c1267062aec6d1277654ee9b0185b7f10814', class: "ui-alert__action" })));
+        return (h(Host, { key: 'a992f9194a52a5c4ed74146bff668801e1285b3f', class: "ui-alert", role: "alert" }, h("div", { key: '619adf8f7fc28db00d2ce5352810323c6ed70075', class: "ui-alert__icon" }, h("svg", { key: 'd670528d64b77f4300febb821403b8bb9553b169', focusable: "false", "aria-hidden": "true", viewBox: "0 0 24 24" }, h("path", { key: '037707695e7781e543947d4cb995f55d755d02a2', d: "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" }))), h("div", { key: '27c544f5346a85c69ce7a1217fd35152c085bbe0', class: "ui-alert__content" }, this.heading && h("div", { key: '9efc76c0e8d66b2c836636516d0beffdf31a9025', class: "ui-alert__content-heading" }, this.heading), h("slot", { key: '53a8a9a38d87331d90c00604e15d1a153898d634' })), h("div", { key: '27234ad8531fddf7eee7245dec8cd6b62f904493', class: "ui-alert__action" })));
     }
 };
 UiAlert.style = alertCss;

@@ -1,4 +1,4 @@
-import { r as registerInstance, a as getElement, h, d as Host } from './index-Bh24I87Q.js';
+import { r as registerInstance, a as getElement, h, d as Host } from './index-Xd35V0a6.js';
 
 const iconCss = "ui-icon{--icon-color:var(--foreground);display:inline-block;line-height:0;vertical-align:middle;height:var(--icon-size);width:var(--icon-size);color:var(--icon-color)}ui-icon>svg{width:var(--icon-size);height:var(--icon-size)}";
 
@@ -53,7 +53,7 @@ const UiIcon = class {
     }
     render() {
         const hasSlottedSvg = this.el.querySelector("svg") !== null;
-        return (h(Host, { key: '6556007cb3432ee9d3241c43a71c27ed549d1806', class: "ui-icon", role: "img", "aria-hidden": this.label ? "false" : "true", style: this.getStyle(), innerHTML: !hasSlottedSvg && this.svgContent ? this.svgContent : undefined }, this.label ? h("span", { class: "sr-only" }, this.label) : null, hasSlottedSvg && h("slot", { key: '64a9473d7acc17acb0453c54d27cff9eea362ffc' })));
+        return (h(Host, { key: '4c15e0dfb5dc33a20dbda24296705c56326a871e', class: "ui-icon", role: "img", "aria-hidden": this.label ? "false" : "true", style: this.getStyle(), innerHTML: !hasSlottedSvg && this.svgContent ? this.svgContent : undefined }, this.label ? h("span", { class: "sr-only" }, this.label) : null, hasSlottedSvg && h("slot", { key: '87ce6e93bd891c3b9c65ef64caed45d11d525594' })));
     }
     static get watchers() { return {
         "src": ["onSrcChange"]
