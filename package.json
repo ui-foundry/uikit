@@ -10,6 +10,7 @@
 		"docs:dev": "pnpm --filter docs dev",
 		"docs:deploy": "pnpm --filter docs build && gh-pages -d docs/dist",
 		"example:react": "pnpm --filter react dev",
+		"example:vue": "pnpm --filter vue dev",
 		"prepare": "lefthook install",
 		"format": "biome format --write",
 		"clean": "run-s clean:*",
