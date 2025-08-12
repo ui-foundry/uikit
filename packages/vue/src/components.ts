@@ -11,6 +11,10 @@ export const UiAvatar: StencilVueComponent<JSX.UiAvatar> = /*@__PURE__*/ defineC
 
 export const UiBadge: StencilVueComponent<JSX.UiBadge> = /*@__PURE__*/ defineContainer<JSX.UiBadge>("ui-badge", undefined, ["circle", "size", "radius"]);
 
+export const UiBreadcrumbItem: StencilVueComponent<JSX.UiBreadcrumbItem> = /*@__PURE__*/ defineContainer<JSX.UiBreadcrumbItem>("ui-breadcrumb-item", undefined);
+
+export const UiBreadcrumbs: StencilVueComponent<JSX.UiBreadcrumbs> = /*@__PURE__*/ defineContainer<JSX.UiBreadcrumbs>("ui-breadcrumbs", undefined, ["label", "sim"]);
+
 export const UiFlex: StencilVueComponent<JSX.UiFlex> = /*@__PURE__*/ defineContainer<JSX.UiFlex>("ui-flex", undefined, ["gap", "direction", "wrap", "align", "justify"]);
 
 export const UiIcon: StencilVueComponent<JSX.UiIcon> = /*@__PURE__*/ defineContainer<JSX.UiIcon>("ui-icon", undefined, ["filled", "size", "label", "color", "src", "variant"]);

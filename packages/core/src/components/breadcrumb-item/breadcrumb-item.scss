@@ -1,0 +1,14 @@
+ui-breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    text-decoration: none;
+    white-space: nowrap;
+    &:hover {
+        color: #374151;
+    }
+    &[aria-current="page"] {
+        color: #374151;
+        font-weight: 500;
+    }
+}

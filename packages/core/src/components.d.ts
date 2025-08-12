@@ -47,6 +47,30 @@ export namespace Components {
          */
         "size": string;
     }
+    interface UiBreadcrumbItem {
+    }
+    /**
+     * The Breadcrumb is used to wraps a series of breadcrumb items to indicate the current page's location within a navigational hierarchy.
+     * @example How to use it
+     * ```html
+     * <ui-breadcrumbs label="Breadcrumb">
+     * <ui-breadcrumb-item>Home</ui-breadcrumb-item>
+     * <ui-breadcrumb-item>Men's clothing</ui-breadcrumb-item>
+     * <ui-breadcrumb-item>Shirt</ui-breadcrumb-item>
+     * <ui-breadcrumb-item>Casual shirts</ui-breadcrumb-item>
+     * </ui-breadcrumbs>
+     * ```
+     */
+    interface UiBreadcrumbs {
+        /**
+          * @default "Breadcrumbs"
+         */
+        "label": string;
+        /**
+          * @default "10px"
+         */
+        "sim": string;
+    }
     interface UiFlex {
         /**
           * @default "flex-start"
@@ -112,6 +136,30 @@ declare global {
         prototype: HTMLUiBadgeElement;
         new (): HTMLUiBadgeElement;
     };
+    interface HTMLUiBreadcrumbItemElement extends Components.UiBreadcrumbItem, HTMLStencilElement {
+    }
+    var HTMLUiBreadcrumbItemElement: {
+        prototype: HTMLUiBreadcrumbItemElement;
+        new (): HTMLUiBreadcrumbItemElement;
+    };
+    /**
+     * The Breadcrumb is used to wraps a series of breadcrumb items to indicate the current page's location within a navigational hierarchy.
+     * @example How to use it
+     * ```html
+     * <ui-breadcrumbs label="Breadcrumb">
+     * <ui-breadcrumb-item>Home</ui-breadcrumb-item>
+     * <ui-breadcrumb-item>Men's clothing</ui-breadcrumb-item>
+     * <ui-breadcrumb-item>Shirt</ui-breadcrumb-item>
+     * <ui-breadcrumb-item>Casual shirts</ui-breadcrumb-item>
+     * </ui-breadcrumbs>
+     * ```
+     */
+    interface HTMLUiBreadcrumbsElement extends Components.UiBreadcrumbs, HTMLStencilElement {
+    }
+    var HTMLUiBreadcrumbsElement: {
+        prototype: HTMLUiBreadcrumbsElement;
+        new (): HTMLUiBreadcrumbsElement;
+    };
     interface HTMLUiFlexElement extends Components.UiFlex, HTMLStencilElement {
     }
     var HTMLUiFlexElement: {
@@ -134,6 +182,8 @@ declare global {
         "ui-alert": HTMLUiAlertElement;
         "ui-avatar": HTMLUiAvatarElement;
         "ui-badge": HTMLUiBadgeElement;
+        "ui-breadcrumb-item": HTMLUiBreadcrumbItemElement;
+        "ui-breadcrumbs": HTMLUiBreadcrumbsElement;
         "ui-flex": HTMLUiFlexElement;
         "ui-icon": HTMLUiIconElement;
         "ui-spinner": HTMLUiSpinnerElement;
@@ -178,6 +228,30 @@ declare namespace LocalJSX {
           * @default "fit-content"
          */
         "size"?: string;
+    }
+    interface UiBreadcrumbItem {
+    }
+    /**
+     * The Breadcrumb is used to wraps a series of breadcrumb items to indicate the current page's location within a navigational hierarchy.
+     * @example How to use it
+     * ```html
+     * <ui-breadcrumbs label="Breadcrumb">
+     * <ui-breadcrumb-item>Home</ui-breadcrumb-item>
+     * <ui-breadcrumb-item>Men's clothing</ui-breadcrumb-item>
+     * <ui-breadcrumb-item>Shirt</ui-breadcrumb-item>
+     * <ui-breadcrumb-item>Casual shirts</ui-breadcrumb-item>
+     * </ui-breadcrumbs>
+     * ```
+     */
+    interface UiBreadcrumbs {
+        /**
+          * @default "Breadcrumbs"
+         */
+        "label"?: string;
+        /**
+          * @default "10px"
+         */
+        "sim"?: string;
     }
     interface UiFlex {
         /**
@@ -228,6 +302,8 @@ declare namespace LocalJSX {
         "ui-alert": UiAlert;
         "ui-avatar": UiAvatar;
         "ui-badge": UiBadge;
+        "ui-breadcrumb-item": UiBreadcrumbItem;
+        "ui-breadcrumbs": UiBreadcrumbs;
         "ui-flex": UiFlex;
         "ui-icon": UiIcon;
         "ui-spinner": UiSpinner;
@@ -240,6 +316,20 @@ declare module "@stencil/core" {
             "ui-alert": LocalJSX.UiAlert & JSXBase.HTMLAttributes<HTMLUiAlertElement>;
             "ui-avatar": LocalJSX.UiAvatar & JSXBase.HTMLAttributes<HTMLUiAvatarElement>;
             "ui-badge": LocalJSX.UiBadge & JSXBase.HTMLAttributes<HTMLUiBadgeElement>;
+            "ui-breadcrumb-item": LocalJSX.UiBreadcrumbItem & JSXBase.HTMLAttributes<HTMLUiBreadcrumbItemElement>;
+            /**
+             * The Breadcrumb is used to wraps a series of breadcrumb items to indicate the current page's location within a navigational hierarchy.
+             * @example How to use it
+             * ```html
+             * <ui-breadcrumbs label="Breadcrumb">
+             * <ui-breadcrumb-item>Home</ui-breadcrumb-item>
+             * <ui-breadcrumb-item>Men's clothing</ui-breadcrumb-item>
+             * <ui-breadcrumb-item>Shirt</ui-breadcrumb-item>
+             * <ui-breadcrumb-item>Casual shirts</ui-breadcrumb-item>
+             * </ui-breadcrumbs>
+             * ```
+             */
+            "ui-breadcrumbs": LocalJSX.UiBreadcrumbs & JSXBase.HTMLAttributes<HTMLUiBreadcrumbsElement>;
             "ui-flex": LocalJSX.UiFlex & JSXBase.HTMLAttributes<HTMLUiFlexElement>;
             "ui-icon": LocalJSX.UiIcon & JSXBase.HTMLAttributes<HTMLUiIconElement>;
             "ui-spinner": LocalJSX.UiSpinner & JSXBase.HTMLAttributes<HTMLUiSpinnerElement>;

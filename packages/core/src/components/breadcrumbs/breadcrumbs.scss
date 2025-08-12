@@ -1,0 +1,18 @@
+ui-breadcrumbs {
+    --separator-inline-margin: 10px;
+    display: block;
+
+    .ui-breadcrumbs {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    [slot="separator"] {
+        display: flex;
+        align-items: center;
+        margin-inline: var(--separator-inline-margin);
+        color: #9ca3af;
+        user-select: none;
+    }
+}

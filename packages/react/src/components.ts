@@ -12,6 +12,8 @@ import { createComponent } from "@stencil/react-output-target/runtime";
 import { defineCustomElement as defineUiAlert, UiAlert as UiAlertElement } from "@uifoundry/uikit/dist/components/ui-alert.js";
 import { defineCustomElement as defineUiAvatar, UiAvatar as UiAvatarElement } from "@uifoundry/uikit/dist/components/ui-avatar.js";
 import { defineCustomElement as defineUiBadge, UiBadge as UiBadgeElement } from "@uifoundry/uikit/dist/components/ui-badge.js";
+import { defineCustomElement as defineUiBreadcrumbItem, UiBreadcrumbItem as UiBreadcrumbItemElement } from "@uifoundry/uikit/dist/components/ui-breadcrumb-item.js";
+import { defineCustomElement as defineUiBreadcrumbs, UiBreadcrumbs as UiBreadcrumbsElement } from "@uifoundry/uikit/dist/components/ui-breadcrumbs.js";
 import { defineCustomElement as defineUiFlex, UiFlex as UiFlexElement } from "@uifoundry/uikit/dist/components/ui-flex.js";
 import { defineCustomElement as defineUiIcon, UiIcon as UiIconElement } from "@uifoundry/uikit/dist/components/ui-icon.js";
 import { defineCustomElement as defineUiSpinner, UiSpinner as UiSpinnerElement } from "@uifoundry/uikit/dist/components/ui-spinner.js";
@@ -48,6 +50,31 @@ export const UiBadge: StencilReactComponent<UiBadgeElement, UiBadgeEvents> = /*@
 	react: React,
 	events: {} as UiBadgeEvents,
 	defineCustomElement: defineUiBadge,
+});
+
+export type UiBreadcrumbItemEvents = NonNullable<unknown>;
+
+export const UiBreadcrumbItem: StencilReactComponent<UiBreadcrumbItemElement, UiBreadcrumbItemEvents> = /*@__PURE__*/ createComponent<
+	UiBreadcrumbItemElement,
+	UiBreadcrumbItemEvents
+>({
+	tagName: "ui-breadcrumb-item",
+	elementClass: UiBreadcrumbItemElement,
+	// @ts-ignore - ignore potential React type mismatches between the Stencil Output Target and your project.
+	react: React,
+	events: {} as UiBreadcrumbItemEvents,
+	defineCustomElement: defineUiBreadcrumbItem,
+});
+
+export type UiBreadcrumbsEvents = NonNullable<unknown>;
+
+export const UiBreadcrumbs: StencilReactComponent<UiBreadcrumbsElement, UiBreadcrumbsEvents> = /*@__PURE__*/ createComponent<UiBreadcrumbsElement, UiBreadcrumbsEvents>({
+	tagName: "ui-breadcrumbs",
+	elementClass: UiBreadcrumbsElement,
+	// @ts-ignore - ignore potential React type mismatches between the Stencil Output Target and your project.
+	react: React,
+	events: {} as UiBreadcrumbsEvents,
+	defineCustomElement: defineUiBreadcrumbs,
 });
 
 export type UiFlexEvents = NonNullable<unknown>;
