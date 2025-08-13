@@ -1,0 +1,17 @@
+import { Component, h, Host } from '@stencil/core';
+
+@Component({
+	tag: "ui-{{kebabCase name}}",
+	styleUrl: "./scss/ui-{{kebabCase name}}.scss",
+	shadow: false,
+})
+export class Ui{{pascalCase name}} {
+    render() {
+        return (
+            <Host class="ui-{{kebabCase name}}">
+                <p>{{kebabCase name}} Component</p>
+                <slot />
+            </Host>
+        );
+    }
+}
