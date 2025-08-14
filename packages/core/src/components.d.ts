@@ -71,6 +71,18 @@ export namespace Components {
          */
         "sim": string;
     }
+    interface UiDivider {
+        "color": string;
+        "label": string;
+        /**
+          * @default "center"
+         */
+        "labelPosition": "center" | "left" | "right";
+        /**
+          * @default "horizontal"
+         */
+        "orientation": "horizontal" | "vertical";
+    }
     interface UiFlex {
         /**
           * @default "flex-start"
@@ -160,6 +172,12 @@ declare global {
         prototype: HTMLUiBreadcrumbsElement;
         new (): HTMLUiBreadcrumbsElement;
     };
+    interface HTMLUiDividerElement extends Components.UiDivider, HTMLStencilElement {
+    }
+    var HTMLUiDividerElement: {
+        prototype: HTMLUiDividerElement;
+        new (): HTMLUiDividerElement;
+    };
     interface HTMLUiFlexElement extends Components.UiFlex, HTMLStencilElement {
     }
     var HTMLUiFlexElement: {
@@ -184,6 +202,7 @@ declare global {
         "ui-badge": HTMLUiBadgeElement;
         "ui-breadcrumb-item": HTMLUiBreadcrumbItemElement;
         "ui-breadcrumbs": HTMLUiBreadcrumbsElement;
+        "ui-divider": HTMLUiDividerElement;
         "ui-flex": HTMLUiFlexElement;
         "ui-icon": HTMLUiIconElement;
         "ui-spinner": HTMLUiSpinnerElement;
@@ -253,6 +272,18 @@ declare namespace LocalJSX {
          */
         "sim"?: string;
     }
+    interface UiDivider {
+        "color"?: string;
+        "label"?: string;
+        /**
+          * @default "center"
+         */
+        "labelPosition"?: "center" | "left" | "right";
+        /**
+          * @default "horizontal"
+         */
+        "orientation"?: "horizontal" | "vertical";
+    }
     interface UiFlex {
         /**
           * @default "flex-start"
@@ -304,6 +335,7 @@ declare namespace LocalJSX {
         "ui-badge": UiBadge;
         "ui-breadcrumb-item": UiBreadcrumbItem;
         "ui-breadcrumbs": UiBreadcrumbs;
+        "ui-divider": UiDivider;
         "ui-flex": UiFlex;
         "ui-icon": UiIcon;
         "ui-spinner": UiSpinner;
@@ -330,6 +362,7 @@ declare module "@stencil/core" {
              * ```
              */
             "ui-breadcrumbs": LocalJSX.UiBreadcrumbs & JSXBase.HTMLAttributes<HTMLUiBreadcrumbsElement>;
+            "ui-divider": LocalJSX.UiDivider & JSXBase.HTMLAttributes<HTMLUiDividerElement>;
             "ui-flex": LocalJSX.UiFlex & JSXBase.HTMLAttributes<HTMLUiFlexElement>;
             "ui-icon": LocalJSX.UiIcon & JSXBase.HTMLAttributes<HTMLUiIconElement>;
             "ui-spinner": LocalJSX.UiSpinner & JSXBase.HTMLAttributes<HTMLUiSpinnerElement>;

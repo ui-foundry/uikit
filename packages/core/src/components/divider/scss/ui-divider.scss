@@ -1,0 +1,11 @@
+/* -------------------------------------------------------------------------- */
+/*                        Divider styles                        */
+/* -------------------------------------------------------------------------- */
+
+@import "./ui-divider.variables";
+
+ui-divider {
+  display: block;
+  border-top: 1px solid #e5e5e8;
+  margin: calc(var(--spacing) * 4) 0;
+}

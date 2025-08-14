@@ -25,12 +25,17 @@
 </head>
 
 <body style="padding: 30px">
-	<bq-breadcrumb label="Breadcrumb">
-		<bq-breadcrumb-item>Home</bq-breadcrumb-item>
-		<bq-breadcrumb-item>Men's clothing</bq-breadcrumb-item>
-		<bq-breadcrumb-item>Shirt</bq-breadcrumb-item>
-		<bq-breadcrumb-item>Casual shirts</bq-breadcrumb-item>
-	</bq-breadcrumb>
+	<ui-divider label="Divider Label" color="primary" label-position="center"></ui-divider>
+	<ui-divider label="Left Aligned" color="secondary" label-position="left"></ui-divider>
+	<ui-divider label="Right Aligned" color="tertiary" label-position="right"></ui-divider>
+
+	<ui-divider>
+		<span>Custom Content</span>
+	</ui-divider>
+
+	<ui-divider color="primary">
+		<span slot="label">Slot Label</span>
+	</ui-divider>
 </body>
 
 </html>
